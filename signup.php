@@ -706,17 +706,22 @@
                                     
                                     <div class="form-group mb-lg">
                                         <label>Provincia</label>
-                                        <div class="input-group input-group-icon">
+                                        <div class="input-group mb-lg">
                                             <input name="state" type="text" class="form-control input-lg" />
-                                            <span class="input-group-addon">
-                                                <span class="icon"><i class="fa fa-question-circle "></i></span>
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-primary btn-lg" type="button" data-toggle="tooltip" data-placement="bottom" title="Necesitamos tu Provincia para ponerte en conctacto con otras personas"><span class="icon"><i class="fa fa-question-circle"></i></span></button>
                                             </span>
                                         </div>
                                     </div>
                                     
                                     <div class="form-group mb-lg">
                                         <label>Ciudad</label>
-                                        <input name="city" type="text" class="form-control input-lg" />
+                                        <div class="input-group mb-lg">
+                                            <input name="city" type="text" class="form-control input-lg" />
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-primary btn-lg" type="button" data-toggle="tooltip" data-placement="bottom" title="Necesitamos tu Ciudad para ponerte en conctacto con otras personas"><span class="icon"><i class="fa fa-question-circle"></i></span></button>
+                                            </span>
+                                        </div>
                                     </div>
                                     
                                     <div class="row">
@@ -736,10 +741,6 @@
 
                                 </form>
                             </div>
-                        </div>
-                        <div class="alert alert-info">
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                            <strong>Need any help?!</strong> We are glad <a href="" class="alert-link">to help you</a>, if you need.
                         </div>
                         <p class="text-center text-muted mt-md mb-md">&copy; Copyright 2017. All Rights Reserved.</p>
                     </div>
