@@ -23,7 +23,7 @@ if(isset($_POST['submit'])) {
 function conectarDDBB() 
 {
     try {
-        $pdo = new PDO('mysql:host=localhost:3306;dbname=movies', 'root','root');
+        $pdo = new PDO('mysql:host=localhost:3306;dbname=BlaBlaPet', 'root','root');
     } catch (PDOException $e) {
         echo 'Connection failed: ' . $e->getMessage();
     }
@@ -34,24 +34,49 @@ function conectarDDBB()
 function sInsertarNuevoUsuario($name, $mail, $pass, $state, $city)
 {
 	$conexion = conectarDDBB();
-	$sentencia = "INSERT INTO Usuarios (Nombre, Mail, Pass, Provincia, Ciudad) VALUES ('".$name."', '".$mail."., '".sha1($pass)."', '".$state."', '".$city."')";
-	//echo $sentencia;
-	$pdo->query($sentencia);
+    $usuario = sConsultarUsuarioRegistrado($mail);
+    
+    if($usuario == 1) {
         
-	if($ejecucion) {
-        $devolver = 'PR000'; //Nuevo usuario con exito
-        //Redirigir a la pagina de añadir tu mascota
+        $sentencia = "INSERT INTO Usuarios (NOMBRE, MAIL, PASS, PROVINCIA, CIUDAD) VALUES ('".$name."', '".$mail."', '".sha1($pass)."', '".$state."', '".$city."')";
+        //echo $sentencia;
+        $ejecucion = $conexion->query($sentencia);
+
+        if($ejecucion) {
+            $devolver = 'PR000'; //Nuevo usuario con exito
+            //Redirigir a la pagina de añadir tu mascota
+
+        } else  {
+            $devolver = 'PR003'; //Error al crear el nuevo usuario
+            //Redirigir a la misma pagina sacando el error
+
+        }
+
+        ##Cerrar conexion DDBB
+        $conexion = null; 
         
-    } else  {
-        $devolver = 'PR003'; //Error al crear el nuevo usuario
-        //Redirigir a la misma pagina sacando el error
-        
+    } else {
+        $devolver = $usuario;
     }
     
-    ##Cerrar conexion DDBB
-	$conexion = null; 
-    
 	return $devolver;  
+}
+
+function sConsultarUsuarioRegistrado($mail) 
+{
+    $conexion = conectarDDBB();
+    
+    $sentencia = "SELECT COUNT(*) FROM Usuarios WHERE MAIL = '".$mail."'";
+    $ejecucion = $conexion->query($sentencia);
+    $resultado = $ejecucion->fetch();
+        
+	if($resultado[0] == 0) {
+        $devolver = 1; //Nuevo usuario con exito
+    } else  {
+        $devolver = 'PR004'; //Usuario ya esta en la DDBB
+    }
+    
+    return $devolver;
 }
 
 ?>

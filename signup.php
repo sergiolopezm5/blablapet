@@ -103,7 +103,7 @@ if(!isset($_SESSION)) {
 
                                     <div class="form-group mb-lg">
                                         <label>E-mail</label>
-                                        <input name="email" type="email" class="form-control input-lg" />
+                                        <input name="mail" type="email" class="form-control input-lg" />
                                     </div>
 
                                     <div class="form-group mb-none">
@@ -142,8 +142,8 @@ if(!isset($_SESSION)) {
                                     <div class="row">
                                         <div class="col-sm-8">
                                             <div class="checkbox-custom checkbox-default">
-                                                <input id="AgreeTerms" name="agreeterms" type="checkbox"/>
-                                                <label for="AgreeTerms">Acepto los terminos de uso</label>
+                                                <input id="AgreeTerms" name="care" type="checkbox"/>
+                                                <label for="AgreeTerms"><b>Ser cuidador</b></label>
                                             </div>
                                         </div>
                                         <div class="col-sm-4 text-right">
