@@ -40,8 +40,12 @@ function sInsertarNuevoUsuario($name, $mail, $pass, $state, $city)
         
 	if($ejecucion) {
         $devolver = 'PR000'; //Nuevo usuario con exito
+        //Redirigir a la pagina de añadir tu mascota
+        
     } else  {
         $devolver = 'PR003'; //Error al crear el nuevo usuario
+        //Redirigir a la misma pagina sacando el error
+        
     }
     
     ##Cerrar conexion DDBB
