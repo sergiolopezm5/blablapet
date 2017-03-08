@@ -70,7 +70,7 @@ if(!isset($_SESSION)) {
 				<div class="header-right">
 			
 					<span class="separator"></span>
-                    <button type="submit" class="btn btn-primary">Inicia Sesión</button>
+                    <a class="mb-xs mt-xs mr-xs modal-basic btn btn-primary" href="#modalForm">Inicia Sesión</a>
                     <span class="separator"></span>
                 
 				</div>
@@ -152,9 +152,12 @@ if(!isset($_SESSION)) {
                                         </div>
                                     </div>
 
-                                    <p class="text-center">¿Ya tienes una cuenta? <a href="pages-signin.html">Inicia Sesión!</a></p>
+                                    <p class="text-center">¿Ya tienes una cuenta? <a class="modal-basic" href="#modalForm">Inicia Sesión!</a></p>
 
                                 </form>
+                                
+                                <?php echo pMostrarModalLogin(); ?>
+                                
                             </div>
                         </div>
                         <p class="text-center text-muted mt-md mb-md">&copy; Copyright 2017. All Rights Reserved.</p>
@@ -212,6 +215,7 @@ if(!isset($_SESSION)) {
 
 		<!-- Examples -->
 		<script src="assets/javascripts/dashboard/examples.dashboard.js"></script>
+		<script src="assets/javascripts/ui-elements/examples.modals.js"></script>
 
 	</body>
 </html>

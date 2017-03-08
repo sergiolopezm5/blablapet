@@ -13,4 +13,35 @@ function pMostrarAlerta($codigo)
     
 }
 
+function pMostrarModalLogin() {
+    $devolver = '<div id="modalForm" class="modal-block modal-block-primary mfp-hide">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            <h2 class="panel-title">Inicia Sesión</h2>
+                        </header>
+                        <div class="panel-body">
+                            <form id="login-form" class="form-horizontal mb-lg" novalidate="novalidate">
+                                <div class="form-group mb-lg col-md-12">
+                                    <label>E-mail</label>
+                                    <input name="email-login" type="email" class="form-control input-lg" />
+                                </div>
+                                <div class="form-group mb-lg col-md-12">
+                                    <label>Contraseña</label>
+                                    <input name="pass-login" type="password" class="form-control input-lg" />
+                                </div>
+                            </form>
+                        </div>
+                        <footer class="panel-footer">
+                            <div class="row">
+                                <div class="col-md-12 text-right">
+                                    <button type="submit" form="login-form" class="btn btn-primary modal-confirm">Entrar</button>
+                                    <button type="reset" form="login-form" class="btn btn-default modal-dismiss">Cancelar</button>
+                                </div>
+                            </div>
+                        </footer>
+                    </section>
+                </div>';
+    return $devolver;
+}
+
 ?>
