@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="fixed sidebar-light">
+<html class="fixed sidebar-light  sidebar-left-collapsed">
 	<head>
 
 		<!-- Basic -->
@@ -218,7 +218,7 @@
 						</div>
 					</div>
 				
-					<div class="nano">
+					<div class="nano has-scrollbar">
 						<div class="nano-content">
 							<nav id="menu" class="nav-main" role="navigation">
 								<ul class="nav nav-main">
