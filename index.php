@@ -152,8 +152,8 @@
 			<section id="contact" class="main style3 secondary">
 				<div class="content">
 					<header>
-						<h2>Say Hello.</h2>
-						<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.</p>
+						<h2>Say Hello. </h2>
+						<p>Blablapet blablapet blablapet blablapet blablapet</p>
 					</header>
 					<div class="box">
 						<form method="post" action="#">
