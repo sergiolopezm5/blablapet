@@ -11,7 +11,7 @@ function conectarDDBB()
 
 }
 
-function sgGetDatosNotificacion($codigo_notificacion) 
+function sGetDatosNotificacion($codigo_notificacion) 
 {
     $conexion = conectarDDBB();
 

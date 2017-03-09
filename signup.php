@@ -13,6 +13,10 @@ if(!isset($_SESSION)) {
 	include("funciones_sql_signup.php");
     include("funciones_php_signup.php");
 
+    ## Añadimos las funciones propias de esta pagina
+	include("funciones_sql_login.php");
+    //include("funciones_php_login.php");
+
 ?>
 
 <!doctype html>
@@ -97,7 +101,7 @@ if(!isset($_SESSION)) {
                             </div>
                             <div class="panel-body">
 
-                                <?php echo pgMensajeEvento($codigo); ?>
+                                <?php echo pMensajeEvento($codigo); ?>
                                 
                                 <form method="post" action="<?=$_SERVER['PHP_SELF'];?>">
                                     <div class="form-group mb-lg">

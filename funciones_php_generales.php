@@ -1,10 +1,10 @@
 <?php
 
-function pgMensajeEvento($codigo_mensaje) {
+function pMensajeEvento($codigo_mensaje) {
     
     if(isset($codigo_mensaje)) {
         
-        $detalles =  sgGetDatosNotificacion($codigo_mensaje);
+        $detalles =  sGetDatosNotificacion($codigo_mensaje);
         
         $tipo_not = $detalles['TIPO_NOTIFICACION'];
         $detalle = $detalles['DESCRIPCION'];   
