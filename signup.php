@@ -65,7 +65,7 @@ if(!isset($_SESSION)) {
 			<!-- start: header -->
 			<header class="header">
 				<div class="logo-container">
-					<a href="../" class="logo">
+					<a href="index.php" class="logo">
 						<img src="assets/images/logo.png" height="35" alt="BlaBlaPet" />
 					</a>
 				</div>
@@ -87,7 +87,7 @@ if(!isset($_SESSION)) {
 				<section class="body-sign">
                     <div class="center-sign">
                         
-                        <a href="/" class="logo pull-left">
+                        <a href="index.php" class="logo pull-left">
                             <img src="assets/images/logo.png" height="70" alt="BlaBlaPet" />
                         </a>
 
