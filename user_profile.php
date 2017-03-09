@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="fixed">
+<html class="fixed sidebar-light">
 	<head>
 
 		<!-- Basic -->
@@ -234,63 +234,111 @@
 									<div id="edit" class="tab-pane">
 
 										<form class="form-horizontal" method="get">
-											<h4 class="mb-xlg">Personal Information</h4>
+											<h4 class="mb-xlg">Información Personal</h4>
 											<fieldset>
 												<div class="form-group">
-													<label class="col-md-3 control-label" for="profileFirstName">First Name</label>
+													<label class="col-md-3 control-label" for="profileFirstName">Nombre</label>
 													<div class="col-md-8">
-														<input type="text" class="form-control" id="profileFirstName">
+														<input type="text" class="form-control" id="nombre">
 													</div>
 												</div>
 												<div class="form-group">
-													<label class="col-md-3 control-label" for="profileLastName">Last Name</label>
+													<label class="col-md-3 control-label" for="profileLastName">Apellidos</label>
 													<div class="col-md-8">
-														<input type="text" class="form-control" id="profileLastName">
+														<input type="text" class="form-control" id="apellido">
 													</div>
 												</div>
 												<div class="form-group">
-													<label class="col-md-3 control-label" for="profileAddress">Address</label>
+													<label class="col-md-3 control-label" for="profileAddress">Nick Usuario</label>
 													<div class="col-md-8">
-														<input type="text" class="form-control" id="profileAddress">
+														<input type="text" class="form-control" id="usuario">
 													</div>
 												</div>
 												<div class="form-group">
-													<label class="col-md-3 control-label" for="profileCompany">Company</label>
+													<label class="col-md-3 control-label" for="profileCompany">Provincia</label>
+                                                    <div class="col-md-8">
+                                                    <select name="provincia">
+	                                                       <option value='0'>(Seleccionar)</option>
+	                                                       <option value='2'>Álava</option>
+	                                                       <option value='3'>Albacete</option>
+	                                                       <option value='4'>Alicante/Alacant</option>
+	                                                       <option value='5'>Almería</option>
+	                                                       <option value='6'>Asturias</option>
+	                                                       <option value='7'>Ávila</option>
+	                                                       <option value='8'>Badajoz</option>
+	                                                       <option value='9'>Barcelona</option>
+	                                                       <option value='10'>Burgos</option>
+	                                                       <option value='11'>Cáceres</option>
+	                                                       <option value='12'>Cádiz</option>
+	                                                       <option value='13'>Cantabria</option>
+	                                                       <option value='14'>Castellón</option>
+	                                                       <option value='15'>Ceuta</option>
+                                                           <option value='16'>Ciudad Real</option>
+	                                                       <option value='17'>Córdoba</option>
+	                                                       <option value='18'>Cuenca</option>
+	                                                       <option value='19'>Girona</option>
+	                                                       <option value='20'>Las Palmas</option>
+	                                                       <option value='21'>Granada</option>
+	                                                       <option value='22'>Guadalajara</option>
+	                                                       <option value='23'>Guipúzcoa</option>
+	                                                       <option value='24'>Huelva</option>
+	                                                       <option value='25'>Huesca</option>
+	                                                       <option value='26'>Islas Baleares</option>
+	                                                       <option value='27'>Jaén</option>
+	                                                       <option value='28'>A Coruña</option>
+	                                                       <option value='29'>La Rioja</option>
+	                                                       <option value='30'>León</option>
+	                                                       <option value='31'>Lleida</option>
+	                                                       <option value='32'>Lugo</option>
+	                                                       <option value='33'>Madrid</option>
+	                                                       <option value='34'>Málaga</option>
+	                                                       <option value='35'>Melilla</option>
+	                                                       <option value='36'>Murcia</option>
+	                                                       <option value='37'>Navarra</option>
+	                                                       <option value='38'>Ourense</option>
+	                                                       <option value='39'>Palencia</option>
+	                                                       <option value='40'>Pontevedra</option>
+	                                                       <option value='41'>Salamanca</option>
+	                                                       <option value='42'>Segovia</option>
+	                                                       <option value='43'>Sevilla</option>
+	                                                       <option value='44'>Soria</option>
+	                                                       <option value='45'>Tarragona</option>
+	                                                       <option value='46'>Santa Cruz de Tenerife</option>
+	                                                       <option value='47'>Teruel</option>
+	                                                       <option value='48'>Toledo</option>
+	                                                       <option value='49'>Valencia</option>
+	                                                       <option value='50'>Valladolid</option>
+	                                                       <option value='51'>Vizcaya</option>
+	                                                       <option value='52'>Zamora</option>
+	                                                       <option value='53'>Zaragoza</option>
+                                                    </select>
+                                                    </div>
 													<div class="col-md-8">
-														<input type="text" class="form-control" id="profileCompany">
+														<input type="text" class="form-control" id="provincia">
 													</div>
 												</div>
 											</fieldset>
 											<hr class="dotted tall">
-											<h4 class="mb-xlg">About Yourself</h4>
+											<h4 class="mb-xlg">Sobre tí</h4>
 											<fieldset>
 												<div class="form-group">
-													<label class="col-md-3 control-label" for="profileBio">Biographical Info</label>
+													<label class="col-md-3 control-label" for="profileBio">Biografía</label>
 													<div class="col-md-8">
 														<textarea class="form-control" rows="3" id="profileBio"></textarea>
 													</div>
 												</div>
-												<div class="form-group">
-													<label class="col-xs-3 control-label mt-xs pt-none">Public</label>
-													<div class="col-md-8">
-														<div class="checkbox-custom checkbox-default checkbox-inline mt-xs">
-															<input type="checkbox" checked="" id="profilePublic">
-															<label for="profilePublic"></label>
-														</div>
-													</div>
-												</div>
 											</fieldset>
 											<hr class="dotted tall">
-											<h4 class="mb-xlg">Change Password</h4>
+											<h4 class="mb-xlg">Cambiar Contraseña</h4>
 											<fieldset class="mb-xl">
 												<div class="form-group">
-													<label class="col-md-3 control-label" for="profileNewPassword">New Password</label>
+													<label class="col-md-3 control-label" for="profileNewPassword">Nueva contraseña</label>
 													<div class="col-md-8">
 														<input type="text" class="form-control" id="profileNewPassword">
 													</div>
 												</div>
 												<div class="form-group">
-													<label class="col-md-3 control-label" for="profileNewPasswordRepeat">Repeat New Password</label>
+													<label class="col-md-3 control-label" for="profileNewPasswordRepeat">Repetir nueva contraseña</label>
 													<div class="col-md-8">
 														<input type="text" class="form-control" id="profileNewPasswordRepeat">
 													</div>
@@ -299,7 +347,7 @@
 											<div class="panel-footer">
 												<div class="row">
 													<div class="col-md-9 col-md-offset-3">
-														<button type="submit" class="btn btn-primary">Submit</button>
+														<button type="submit" class="btn btn-primary">Actualizar</button>
 														<button type="reset" class="btn btn-default">Reset</button>
 													</div>
 												</div>
