@@ -83,10 +83,10 @@
 							<ul class="list-unstyled">
 								<li class="divider"></li>
 								<li>
-									<a role="menuitem" tabindex="-1" href="pages-user-profile.html"><i class="fa fa-user"></i>Mi perfil</a>
+									<a role="menuitem" tabindex="-1" href="user_profile.php"><i class="fa fa-user"></i>Mi perfil</a>
 								</li>
 								<li>
-									<a role="menuitem" tabindex="-1" href="pages-signin.html"><i class="fa fa-power-off"></i>Cerrar sesión</a>
+									<a role="menuitem" tabindex="-1" href="signup.php"><i class="fa fa-power-off"></i>Cerrar sesión</a>
 								</li>
 							</ul>
 						</div>
@@ -153,11 +153,87 @@
 									<li>
 										<a href="#edit" data-toggle="tab">Actualizar perfil</a>
 									</li>
+                                    <li>
+										<a href="#edit-pet" data-toggle="tab">Editar mascota</a>
+                                    </li>
 								</ul>
 								<div class="tab-content">
 									<div id="overview" class="tab-pane active">
 										
                                         <form class="form-horizontal" method="get">
+											<h4 class="mb-xlg">Nueva mascota</h4>
+											<fieldset>
+												<div class="form-group">
+													<label class="col-md-3 control-label" for="profileFirstName">Nombre</label>
+													<div class="col-md-8">
+														<input type="text" class="form-control" id="nombremascota">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label" for="profileLastName">Animal</label>
+													<div class="col-md-8">
+														<select name="tipo">
+
+                                                                <option value="1">Perro</option>
+
+                                                                <option value="2">Gato</option>
+
+                                                                <option value="3">Otros</option>
+
+                                                        </select>
+													</div>
+                                                    <div class="col-md-8">
+														<input type="text" class="form-control" id="tipo-mascota"  style="visibility: hidden;">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label" for="profileAddress">Tamano</label>
+													<div class="col-md-8">
+                                                        <select name="tamano">
+
+                                                                <option value="1">S</option>
+
+                                                                <option value="2">M</option>
+
+                                                                <option value="3">L</option>
+
+                                                        </select>
+													</div>
+                                                     <div class="col-md-8">
+														<input type="text" class="form-control" id="tamano" style="visibility: hidden;">
+                                                     </div>
+												</div>
+                                                <div class="form-group">
+													<label class="col-md-3 control-label" for="profileAddress">Agresividad</label>
+													<div class="col-md-8">
+														<input type="text" class="form-control" id="agresividad">
+													</div>
+												</div>
+											</fieldset>
+											<hr class="dotted tall">
+											<h4 class="mb-xlg">Sobre tu mascota</h4>
+											<fieldset>
+												<div class="form-group">
+													<label class="col-md-3 control-label" for="profileBio">Mascota</label>
+													<div class="col-md-8">
+														<textarea class="form-control" rows="3" id="mascotaBio"></textarea>
+													</div>
+												</div>
+											</fieldset>
+											<div class="panel-footer">
+												<div class="row">
+													<div class="col-md-9 col-md-offset-3">
+														<button type="submit" class="btn btn-primary">Registrar</button>
+														<button type="reset" class="btn btn-default">Reset</button>
+													</div>
+												</div>
+											</div>
+
+										</form>
+									</div>
+									<div id="edit" class="tab-pane">
+
+										<form class="form-horizontal" method="get">
 											<h4 class="mb-xlg">Personal Information</h4>
 											<fieldset>
 												<div class="form-group">
@@ -230,8 +306,9 @@
 											</div>
 
 										</form>
+
 									</div>
-									<div id="edit" class="tab-pane">
+                                    <div id="edit-pet" class="tab-pane">
 
 										<form class="form-horizontal" method="get">
 											<h4 class="mb-xlg">Personal Information</h4>
