@@ -13,9 +13,8 @@ if(!isset($_SESSION)) {
 	include("funciones_sql_signup.php");
     include("funciones_php_signup.php");
 
-    ## Añadimos las funciones propias de esta pagina
+    ## Añadimos las funciones para el inicio de sesion
 	include("funciones_sql_login.php");
-    //include("funciones_php_login.php");
 
 ?>
 
