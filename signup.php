@@ -96,8 +96,8 @@ if(!isset($_SESSION)) {
                                 <h2 class="title text-uppercase text-weight-bold m-none"><i class="fa fa-user mr-xs"></i> Registrate </h2>
                             </div>
                             <div class="panel-body">
-                                
-                                <?php echo pMostrarAlerta($codigo); ?>
+
+                                <?php echo pgMensajeEvento($codigo); ?>
                                 
                                 <form method="post" action="<?=$_SERVER['PHP_SELF'];?>">
                                     <div class="form-group mb-lg">

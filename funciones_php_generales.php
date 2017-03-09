@@ -1,5 +1,37 @@
 <?php
 
+function pgMensajeEvento($codigo_mensaje) {
+    
+    if(isset($codigo_mensaje)) {
+        
+        $detalles =  sgGetDatosNotificacion($codigo_mensaje);
+        
+        $tipo_not = $detalles['TIPO_NOTIFICACION'];
+        $detalle = $detalles['DESCRIPCION'];   
+
+
+        switch ($tipo_not) {
+            case 'DANGER':
+                $clase='danger';
+            break;  
+            case 'WARNING':
+                $clase='warning';
+            break;  
+            case 'SUCCESS':
+                $clase='success';
+            break;   
+
+        }
+
+        $devolver = '<div class="alert alert-'.$clase.'">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <strong>'.$codigo_mensaje.'</strong> '.$detalle.'.
+                    </div>';
+
+        return   $devolver;
+    }
+}
+
 function pMostrarSidebar() {
     
     $devolver = '<aside id="sidebar-left" class="sidebar-left">
