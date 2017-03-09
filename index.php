@@ -5,7 +5,7 @@
 		<!-- Basic -->
 		<meta charset="UTF-8">
 
-		<title>Light Sidebar Layout | Porto Admin - Responsive HTML5 Template 1.5.4</title>
+		<title>BlaBlaPet</title>
 		<meta name="keywords" content="HTML5 Admin Template" />
 		<meta name="description" content="Porto Admin - Responsive HTML5 Template">
 		<meta name="author" content="okler.net">
@@ -117,33 +117,13 @@
 			<section id="work" class="main style3 primary">
 				<div class="content">
 					<header>
-						<h2>My Work</h2>
+						<h2>Experiencias</h2>
 						<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
 						Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
 						arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.</p>
 					</header>
 
-					<!-- Gallery  -->
-						<div class="gallery">
-							<article class="from-left">
-								<a href="images/fulls/01.jpg" class="image fit"><img src="images/thumbs/01.jpg" title="The Anonymous Red" alt="" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/fulls/02.jpg" class="image fit"><img src="images/thumbs/02.jpg" title="Airchitecture II" alt="" /></a>
-							</article>
-							<article class="from-left">
-								<a href="images/fulls/03.jpg" class="image fit"><img src="images/thumbs/03.jpg" title="Air Lounge" alt="" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/fulls/04.jpg" class="image fit"><img src="images/thumbs/04.jpg" title="Carry on" alt="" /></a>
-							</article>
-							<article class="from-left">
-								<a href="images/fulls/05.jpg" class="image fit"><img src="images/thumbs/05.jpg" title="The sparkling shell" alt="" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/fulls/06.jpg" class="image fit"><img src="images/thumbs/06.jpg" title="Bent IX" alt="" /></a>
-							</article>
-						</div>
+					
 
 				</div>
 			</section>
@@ -152,9 +132,20 @@
 			<section id="contact" class="main style3 secondary">
 				<div class="content">
 					<header>
-						<h2>Say Hello. </h2>
+						<h2> ¡ Únete ! </h2>
 						<p>Blablapet blablapet blablapet blablapet blablapet</p>
 					</header>
+					<div class="box">
+					<h3> ¿Tú mascota necesita despejarse? Dale un paseo </h3>
+						<form method="post" action="#">
+							<div class="field half first"><input type="text" name="name" placeholder="Dinos tu ciudad" /></div>
+							
+							<ul class="actions">
+								<li><input type="submit" value="Buscar" /></li>
+							</ul>
+						</form>
+					</div>
+					<br>
 					<div class="box">
 						<form method="post" action="#">
 							<div class="field half first"><input type="text" name="name" placeholder="Name" /></div>
