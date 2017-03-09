@@ -1,5 +1,9 @@
 <?php 
 
+    ## Añadimos las funciones generales
+    include("funciones_sql_generales.php");
+    include("funciones_php_generales.php");
+
 
 if(!isset($_SESSION)) {
     session_start();

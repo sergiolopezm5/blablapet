@@ -1,3 +1,10 @@
+<?php
+
+    include("funciones_sql_generales.php");
+    include("funciones_php_generales.php");
+
+?>
+
 <!doctype html>
 <html class="fixed sidebar-light  sidebar-left-collapsed">
 	<head>
@@ -175,91 +182,34 @@
 			
 					<span class="separator"></span>
 			
-					<div id="userbox" class="userbox">
-						<a href="#" data-toggle="dropdown">
-							<figure class="profile-picture">
-								<img src="assets/images/!logged-user.jpg" alt="Joseph Doe" class="img-circle" data-lock-picture="assets/images/!logged-user.jpg" />
-							</figure>
-							<div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
-								<span class="name">John Doe Junior</span>
-								<span class="role">administrator</span>
-							</div>
-			
-							<i class="fa custom-caret"></i>
-						</a>
-			
-						<div class="dropdown-menu">
-							<ul class="list-unstyled">
-								<li class="divider"></li>
-								<li>
-									<a role="menuitem" tabindex="-1" href="pages-user-profile.html"><i class="fa fa-user"></i> My Profile</a>
-								</li>
-								<li>
-									<a role="menuitem" tabindex="-1" href="pages-signin.html"><i class="fa fa-power-off"></i> Logout</a>
-								</li>
-							</ul>
-						</div>
-					</div>
+                    <!-- Info Usuario -->
+					<?php echo pMostrarInfoUsuario(); ?>
+                    <!-- Info Usuario -->
+                    
 				</div>
 				<!-- end: search & user box -->
 			</header>
 			<!-- end: header -->
 
 			<div class="inner-wrapper">
+                
 				<!-- start: sidebar -->
-				<aside id="sidebar-left" class="sidebar-left">
-				
-					<div class="sidebar-header">
-						<div class="sidebar-title">
-							Navigation
-						</div>
-						<div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
-							<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
-						</div>
-					</div>
-				
-					<div class="nano has-scrollbar">
-						<div class="nano-content">
-							<nav id="menu" class="nav-main" role="navigation">
-								<ul class="nav nav-main">
-									<li>
-										<a href="index.html">
-											<i class="fa fa-home" aria-hidden="true"></i>
-											<span>Dashboard</span>
-										</a>
-									</li>
-                                    <li>
-										<a href="index.html">
-											<i class="fa fa-user" aria-hidden="true"></i>
-											<span>Perfil</span>
-										</a>
-									</li>
-									<li>
-										<a href="mailbox-folder.html">
-											<span class="pull-right label label-primary">182</span>
-											<i class="fa fa-envelope" aria-hidden="true"></i>
-											<span>Mailbox</span>
-										</a>
-									</li>
-								</ul>
-							</nav>
-						</div>
-				
-						<script>
-							// Maintain Scroll Position
-							if (typeof localStorage !== 'undefined') {
-								if (localStorage.getItem('sidebar-left-position') !== null) {
-									var initialPosition = localStorage.getItem('sidebar-left-position'),
-										sidebarLeft = document.querySelector('#sidebar-left .nano-content');
-									
-									sidebarLeft.scrollTop = initialPosition;
-								}
-							}
-						</script>
-				
-					</div>
-				
-				</aside>
+                <?php echo pMostrarSidebar(); ?>
+				<!-- end: sidebar -->
+                
+				<script>
+                    // Maintain Scroll Position
+                    if (typeof localStorage !== 'undefined') {
+                        if (localStorage.getItem('sidebar-left-position') !== null) {
+                            var initialPosition = localStorage.getItem('sidebar-left-position'),
+                                sidebarLeft = document.querySelector('#sidebar-left .nano-content');
+
+                            sidebarLeft.scrollTop = initialPosition;
+                        }
+                    }
+                </script>
+                
+                
 				<!-- end: sidebar -->
 
 				<section role="main" class="content-body">
