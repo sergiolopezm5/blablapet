@@ -4,13 +4,13 @@ function pMostrarCuidadores() {
     $devolver = '';
 	
 	$row = sGetCuidadores();
-	
-	foreach ($row as $elemento){
-	
+
+	while($datos=$row->fetch(PDO::FETCH_ASSOC)){//sacar array en PDO
+
 		  
         $devolver .='<div class="col-lg-3 col-sm-6">
                         <div class="plan">
-                            <h3>'.elemento['NOMBRE'].'<span>$59</span></h3>
+                            <h3>'.$datos['NOMBRE'].'<span>$59</span></h3>
                             <a class="btn btn-lg btn-primary" href="#">Sign up</a>
                             <ul>
                                 <li><b>10GB</b> Disk Space</li>
@@ -19,8 +19,7 @@ function pMostrarCuidadores() {
                             </ul>
                         </div>
                     </div>';	
-	}
-
+	}	
     
     return $devolver;
 }

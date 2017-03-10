@@ -9,7 +9,7 @@
     
     if(isset($_SESSION['USER'])) {
 
-        //include("funciones_sql_dashboard.php");
+        include("funciones_sql_dashboard.php");
         include("funciones_php_dashboard.php");
 
 

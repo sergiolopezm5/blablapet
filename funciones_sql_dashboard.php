@@ -13,13 +13,10 @@ function sGetCuidadores(){
 					(SELECT BIOGRAFIA FROM usuarios WHERE ID=cuidadores.ID_USUARIO)as BIOGRAFIA
 					FROM cuidadores";
     $ejecucion=$conexion->query($sentencia);
-	$devolver=array();
-	while($datos=$ejecucion->fetch_array()){
 
-		$devolver[]=$datos;
-	}	
-	mysqli_close($conexion);  
-	return $devolver; 
+	//mysqli_close($conexion);  
+	$conexion = null;
+	return $ejecucion; 
 
 }
 
