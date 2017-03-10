@@ -4,9 +4,6 @@
     include("funciones_sql_generales.php");
     include("funciones_php_generales.php");
 
-    //include("funciones_sql_dashboard.php");
-    include("funciones_php_dashboard.php");
-
     session_start();
 ?>
 
