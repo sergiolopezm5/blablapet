@@ -1,8 +1,8 @@
 <?php
 
 function getUserId(){
-    if(isset($_SESSION['ID'])) {
-        return $_SESSION['ID']; 
+    if(isset($_SESSION['USER'])) {
+        return $_SESSION['USER']; 
     }else {
     // header("Location: dashboard.php");
     }
