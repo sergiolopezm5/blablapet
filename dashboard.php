@@ -132,7 +132,7 @@
                                         <div class="form-group mb-lg">
                                 
                                             <label>Provincia</label>
-                                            <select class="form-control mb-md">
+                                            <select name="state" id="state" class="form-control mb-md">
                                                 <option value="A Coruña" <?php if($_SESSION['STATE'] == 'A Coruña') { echo 'selected="selected"';} ?>>A coruña</option>
                                                 <option value="Alava" <?php if($_SESSION['STATE'] == 'Alava') { echo 'selected="selected"';} ?>>Alava</option>
                                                 <option value="Albacete" <?php if($_SESSION['STATE'] == 'Albacete') { echo 'selected="selected"';} ?>>Albacete</option>
@@ -190,7 +190,7 @@
 
                                         <div class="form-group mb-lg">
                                             <label>Tamaño</label>
-                                            <select class="form-control mb-md">
+                                            <select name="size" id="size" class="form-control mb-md">
                                                 <option value="1">S</option>
                                                 <option value="2">M</option>
                                                 <option selected="selected" value="3">L</option>
@@ -199,7 +199,7 @@
 
                                         <div class="form-group mb-lg">
                                             <label>E-mail</label>
-                                            <select class="form-control mb-md">
+                                            <select name="agre" id="agre" class="form-control mb-md">
                                                 <option value="1">Muy tranquilo</option>
                                                 <option value="2">Tranquilo</option>
                                                 <option value="3">Normal</option>
@@ -208,7 +208,7 @@
                                             </select>
                                         </div>
                                         <div class="form-group mb-lg">
-                                            <button type="submit" name="submit" class="btn btn-primary hidden-xs">Filtrar</button>
+                                            <button type="submit" name="submit" onclick="filtrarCuidadores()" class="btn btn-primary hidden-xs">Filtrar</button>
                                         </div>
                                     
                                     </form>
