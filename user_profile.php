@@ -58,7 +58,10 @@
 
 			<!-- start: header -->
 			<header class="header">
-				<?php echo pMostrarHeader() ?>
+				<?php echo pMostrarHeader();
+                $ID = $_SESSION['USER'];
+                $datos = sGetDatosUsuario($ID);
+                ?>
 			</header>
 			<!-- end: header -->
 
