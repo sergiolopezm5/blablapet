@@ -4,13 +4,19 @@
     include("funciones_sql_generales.php");
     include("funciones_php_generales.php");
 
-    session_start();
-
+    if(!isset($_SESSION)) {
+        session_start();
+    }
     
+    if(isset($_SESSION['USER'])) {
+
+        include("funciones_sql_user.php");
+        include("funciones_php_user.php");
+
 ?>
 
 <!doctype html>
-<html class="fixed sidebar-light">
+<html class="fixed sidebar-light sidebar-left-collapsed">
 	<head>
 
 		<!-- Basic -->
@@ -54,7 +60,7 @@
 			<header class="header">
 				<div class="logo-container">
 					<a href="../" class="logo">
-						<img src="assets/images/logo.png" height="35" alt="Blablapet" />
+						<img src="assets/images/logo.png" height="35" alt="Porto Admin" />
 					</a>
 					<div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
 						<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
@@ -64,18 +70,126 @@
 				<!-- start: search & user box -->
 				<div class="header-right">
 			
-					<form action="pages-search-results.html" class="search nav-form">
-						<div class="input-group input-search">
-							<input type="text" class="form-control" name="q" id="q" placeholder="Buscar Oferta...">
-							<span class="input-group-btn">
-								<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
-							</span>
-						</div>
-					</form>
+					<ul class="notifications">
+						<li>
+							<a href="#" class="dropdown-toggle notification-icon" data-toggle="dropdown">
+								<i class="fa fa-envelope"></i>
+								<span class="badge">4</span>
+							</a>
+			
+							<div class="dropdown-menu notification-menu">
+								<div class="notification-title">
+									<span class="pull-right label label-default">230</span>
+									Messages
+								</div>
+			
+								<div class="content">
+									<ul>
+										<li>
+											<a href="#" class="clearfix">
+												<figure class="image">
+													<img src="assets/images/!sample-user.jpg" alt="Joseph Doe Junior" class="img-circle" />
+												</figure>
+												<span class="title">Joseph Doe</span>
+												<span class="message">Lorem ipsum dolor sit.</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="clearfix">
+												<figure class="image">
+													<img src="assets/images/!sample-user.jpg" alt="Joseph Junior" class="img-circle" />
+												</figure>
+												<span class="title">Joseph Junior</span>
+												<span class="message truncate">Truncated message. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lacinia orci. Proin vestibulum eget risus non luctus. Nunc cursus lacinia lacinia. Nulla molestie malesuada est ac tincidunt. Quisque eget convallis diam, nec venenatis risus. Vestibulum blandit faucibus est et malesuada. Sed interdum cursus dui nec venenatis. Pellentesque non nisi lobortis, rutrum eros ut, convallis nisi. Sed tellus turpis, dignissim sit amet tristique quis, pretium id est. Sed aliquam diam diam, sit amet faucibus tellus ultricies eu. Aliquam lacinia nibh a metus bibendum, eu commodo eros commodo. Sed commodo molestie elit, a molestie lacus porttitor id. Donec facilisis varius sapien, ac fringilla velit porttitor et. Nam tincidunt gravida dui, sed pharetra odio pharetra nec. Duis consectetur venenatis pharetra. Vestibulum egestas nisi quis elementum elementum.</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="clearfix">
+												<figure class="image">
+													<img src="assets/images/!sample-user.jpg" alt="Joe Junior" class="img-circle" />
+												</figure>
+												<span class="title">Joe Junior</span>
+												<span class="message">Lorem ipsum dolor sit.</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="clearfix">
+												<figure class="image">
+													<img src="assets/images/!sample-user.jpg" alt="Joseph Junior" class="img-circle" />
+												</figure>
+												<span class="title">Joseph Junior</span>
+												<span class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lacinia orci. Proin vestibulum eget risus non luctus. Nunc cursus lacinia lacinia. Nulla molestie malesuada est ac tincidunt. Quisque eget convallis diam.</span>
+											</a>
+										</li>
+									</ul>
+			
+									<hr />
+			
+									<div class="text-right">
+										<a href="#" class="view-more">View All</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle notification-icon" data-toggle="dropdown">
+								<i class="fa fa-bell"></i>
+								<span class="badge">3</span>
+							</a>
+			
+							<div class="dropdown-menu notification-menu">
+								<div class="notification-title">
+									<span class="pull-right label label-default">3</span>
+									Alerts
+								</div>
+			
+								<div class="content">
+									<ul>
+										<li>
+											<a href="#" class="clearfix">
+												<div class="image">
+													<i class="fa fa-thumbs-down bg-danger"></i>
+												</div>
+												<span class="title">Server is Down!</span>
+												<span class="message">Just now</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="clearfix">
+												<div class="image">
+													<i class="fa fa-lock bg-warning"></i>
+												</div>
+												<span class="title">User Locked</span>
+												<span class="message">15 minutes ago</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="clearfix">
+												<div class="image">
+													<i class="fa fa-signal bg-success"></i>
+												</div>
+												<span class="title">Connection Restaured</span>
+												<span class="message">10/10/2016</span>
+											</a>
+										</li>
+									</ul>
+			
+									<hr />
+			
+									<div class="text-right">
+										<a href="#" class="view-more">View All</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
 			
 					<span class="separator"></span>
 			
-					<span class="separator"></span>
+                    <!-- Info Usuario -->
+					<?php echo pMostrarInfoUsuario(); ?>
+                    <!-- Info Usuario -->
+
 				</div>
 				<!-- end: search & user box -->
 			</header>
@@ -84,42 +198,26 @@
 			<div class="inner-wrapper">
                 
                 <!-- start: sidebar -->
-                <?php echo pMostrarSidebar(); 
-                      echo pMostrarInfoUsuario();
-                      $ID = $_SESSION["ID"];
-                      $datos = sGetDatosUsuario($ID);
-                ?>
+                <?php echo pMostrarSidebar(); ?>
 				<!-- end: sidebar -->
 				
 				<section role="main" class="content-body">
 					<header class="page-header">
-						<h2>Perfil de usuario</h2>
-					
-						<div class="right-wrapper pull-right">
-							<ol class="breadcrumbs">
-								<li>
-									<a href="index.html">
-										<i class="fa fa-home"></i>
-									</a>
-								</li>
-							</ol>
-					
-							<a class="sidebar-right-toggle"><i class="fa fa-chevron-left"></i></a>
-						</div>
+						<h2>Light Sidebar Layout</h2>
+                        
 					</header>
 
 					<!-- start: page -->
 
 					<div class="row">
 						<div class="col-md-4 col-lg-3">
-
+]
 							<section class="panel">
 								<div class="panel-body">
 									<div class="thumb-info mb-md">
 										<img src="assets/images/!logged-user.jpg" class="rounded img-responsive" alt="John Doe">
 										<div class="thumb-info-title">
-											<span class="thumb-info-inner">John Doe</span>
-											<span class="thumb-info-type">CEO</span>
+											<span class="thumb-info-inner"><?php echo $datos[1] ?></span>
 										</div>
 									</div>
 
@@ -127,7 +225,7 @@
 									<hr class="dotted short">
 
 									<h6 class="text-muted">Sobre tí</h6>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis vulputate quam. Interdum et malesuada</p>
+									<p><?php echo $datos[7] ?></p>
 									<hr class="dotted short">
 
 
@@ -162,10 +260,12 @@
 														<input type="text" class="form-control" id="nombremascota">
 													</div>
 												</div>
+                                                <br>
+                                                <br>
 												<div class="form-group">
 													<label class="col-md-3 control-label" for="profileLastName">Animal</label>
 													<div class="col-md-8">
-														<select name="tipo">
+														<select name="tipo" id=tipo>
 
                                                                 <option value="1">Perro</option>
 
@@ -182,7 +282,7 @@
 												<div class="form-group">
 													<label class="col-md-3 control-label" for="profileAddress">Tamano</label>
 													<div class="col-md-8">
-                                                        <select name="tamano">
+                                                        <select name="tamano" id="tamano">
 
                                                                 <option value="1">S</option>
 
@@ -199,7 +299,19 @@
                                                 <div class="form-group">
 													<label class="col-md-3 control-label" for="profileAddress">Agresividad</label>
 													<div class="col-md-8">
-														<input type="text" class="form-control" id="agresividad">
+														<select name="agresividad" id="agresividad">
+
+                                                                <option value="1">Muy tranquilo</option>
+
+                                                                <option value="2">Tranquilo</option>
+
+                                                                <option value="3">Normal</option>
+                                                            
+                                                                <option value="4">Agresivo</option>
+                                                            
+                                                                <option value="5">Muy agresivo</option>
+
+                                                        </select>
 													</div>
 												</div>
 											</fieldset>
@@ -232,19 +344,13 @@
 												<div class="form-group">
 													<label class="col-md-3 control-label" for="profileFirstName">Nombre</label>
 													<div class="col-md-8">
-														<input type="text" class="form-control" id="nombre">
+														<input type="text" class="form-control" id="nombre"  value="<?php echo $datos[1]?>">
 													</div>
 												</div>
 												<div class="form-group">
-													<label class="col-md-3 control-label" for="profileLastName">Apellidos</label>
+													<label class="col-md-3 control-label" for="profileAddress">E-Mail</label>
 													<div class="col-md-8">
-														<input type="text" class="form-control" id="apellido">
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-md-3 control-label" for="profileAddress">Nick Usuario</label>
-													<div class="col-md-8">
-														<input type="text" class="form-control" id="usuario">
+														<input type="text" class="form-control" id="mail" value="<?php echo $datos[2]?>">
 													</div>
 												</div>
 												<div class="form-group">
@@ -307,7 +413,7 @@
                                                     </select>
                                                     </div>
 													<div class="col-md-8">
-														<input type="text" class="form-control" id="provincia">
+														<input type="text" class="form-control" id="provincia" style="visibility: hidden;">
 													</div>
 												</div>
 											</fieldset>
@@ -317,7 +423,7 @@
 												<div class="form-group">
 													<label class="col-md-3 control-label" for="profileBio">Biografía</label>
 													<div class="col-md-8">
-														<textarea class="form-control" rows="3" id="profileBio"></textarea>
+														<textarea class="form-control" rows="3" id="profileBio"><?php echo $datos[7] ?></textarea>
 													</div>
 												</div>
 											</fieldset>
@@ -475,3 +581,7 @@
 
 	</body>
 </html>
+
+<?php } else {
+        header("Location: index.php");
+    } ?>

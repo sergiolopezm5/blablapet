@@ -23,16 +23,15 @@ function sComprobarUsuarioRegistrado($mail, $pass)
 {
     $conexion = conectarDDBB();
     
-    $sentencia = "SELECT ID, NOMBRE, MAIL FROM Usuarios WHERE MAIL = '".$mail."' AND PASS = '".$pass."'";
-    $ejecucion = $conexion->query($sentencia);
-        
-	if($login = $ejecucion->fetch(PDO::FETCH_ASSOC)){
-        $_SESSION['ID'] = $login['ID'];
-        $_SESSION['NOMBRE'] = $login['NOMBRE'];
+    $query_login = "SELECT * FROM Usuarios WHERE MAIL ='".$mail."' AND PASS = '".$pass."'";
+    $login_result = $conexion->query($query_login);
+    if($login = $login_result->fetch()){
+        $_SESSION['USER'] = $login['ID'];
+        $_SESSION['NAME'] = $login['NOMBRE'];
         $_SESSION['MAIL'] = $login['MAIL'];
-        $devolver = 'PL000'; //Iniciada la sesion con exito
-    } else {
-        $devolver = 'PL002'; //Error al iniciar sesion
+        $devolver = 'PL000'; //Correcto
+    } else{
+        $devolver = 'PL002'; // Error al establecer sesion
     }
     
     return $devolver;
