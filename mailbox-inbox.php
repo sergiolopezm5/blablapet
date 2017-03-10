@@ -259,13 +259,11 @@
 							
 											<ul class="list-unstyled mt-xl pt-md">
 												<li>
-													<a href="mailbox-folder.html" class="menu-item active">Recibidos <span class="label label-primary text-weight-normal pull-right"><?php echo sNumMensajesNuevos("2") ?></span></a>
+													<a href="mailbox-inbox.php" class="menu-item active">Recibidos <span class="label label-primary text-weight-normal pull-right"><?php echo sNumMensajesNuevos() ?></span></a>
 												</li>
-												
 												<li>
-													<a href="mailbox-folder.html" class="menu-item">Enviados</a>
+													<a href="mailbox-sent.php" class="menu-item">Enviados</a>
 												</li>
-												
 												
 											</ul>
 							
@@ -310,26 +308,7 @@
 										<div class="nano-content">
 											<ul id="" class="list-unstyled">
 							
-												<li class="unread">
-													<a href="mailbox-email.html">
-														<div class="col-sender">
-															<div class="checkbox-custom checkbox-text-primary ib">
-																<input type="checkbox" id="mail1">
-																<label for="mail1"></label>
-															</div>
-															<p class="m-none ib">Okler Themes</p>
-														</div>
-														<div class="col-mail">
-															<p class="m-none mail-content">
-																<span class="subject">Check out our new Porto Admin theme! &nbsp;–&nbsp;</span>
-																<span class="mail-partial">We are proud to announce that our new theme Porto Admin is ready, wants to know more about it?</span>
-															</p>
-															<p class="m-none mail-date">11:35 am</p>
-														</div>
-													</a>
-												</li>
-							                     
-                                                <?php echo sObtenerMensajesRecibidos("2") ?>
+                                                <?php echo sObtenerMensajesRecibidos() ?>
 												
 											</ul>
 										</div>
