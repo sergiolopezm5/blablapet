@@ -11,6 +11,8 @@
 
         include("funciones_sql_dashboard.php");
         include("funciones_php_dashboard.php");
+		include("funciones_sql_mailbox.php");
+        include("funciones_php_mailbox.php");
 
 
 ?>

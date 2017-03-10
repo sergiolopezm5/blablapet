@@ -65,7 +65,7 @@ function pMostrarSidebar() {
 									</li>
 									<li>
 										<a href="mailbox-inbox.php">
-											<span class="pull-right label label-primary">182</span>
+											'.pMensajesNuevos().'
 											<i class="fa fa-envelope" aria-hidden="true"></i>
 											<span>Mensajes</span>
 										</a>
