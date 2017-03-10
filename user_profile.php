@@ -7,7 +7,6 @@
     session_start();
 
     
-    
 ?>
 
 <!doctype html>
@@ -87,6 +86,8 @@
                 <!-- start: sidebar -->
                 <?php echo pMostrarSidebar(); 
                       echo pMostrarInfoUsuario();
+                      $ID = $_SESSION["ID"];
+                      $datos = sGetDatosUsuario($ID);
                 ?>
 				<!-- end: sidebar -->
 				
