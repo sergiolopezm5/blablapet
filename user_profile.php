@@ -1,3 +1,12 @@
+
+<?php
+
+    include("funciones_sql_generales.php");
+    include("funciones_php_generales.php");
+
+    session_start();
+?>
+
 <!doctype html>
 <html class="fixed sidebar-light">
 	<head>
@@ -35,6 +44,7 @@
 		<!-- Head Libs -->
 		<script src="assets/vendor/modernizr/modernizr.js"></script>
 
+    include("funciones_php_dashboard.php");
 	</head>
 	<body>
 		<section class="body">
@@ -97,6 +107,10 @@
 			<!-- end: header -->
 
 			<div class="inner-wrapper">
+                
+                <!-- start: sidebar -->
+                <?php echo pMostrarSidebar(); ?>
+				<!-- end: sidebar -->
 				
 				<section role="main" class="content-body">
 					<header class="page-header">
