@@ -155,7 +155,7 @@
 											
 											<ul class="list-unstyled mt-xl pt-md">
 												<li>
-													<a href="mailbox-inbox.php" class="menu-item ">Recibidos <span class="label label-primary text-weight-normal pull-right"><?php echo sNumMensajesNuevos() ?></span></a>
+													<a href="mailbox-inbox.php" class="menu-item ">Recibidos <?php echo pMensajesNuevos() ?></a>
 												</li>
 												<li>
 													<a href="mailbox-sent.php" class="menu-item active">Enviados</a>
