@@ -182,10 +182,10 @@
                         <div class="col-md-8 col-lg-8">
                         <div class="pricing-table">
 							<?php echo pMostrarCuidadores(); ?>
+                            <?php echo pMostrarModalContactar(); ?>
 						</div>
+                            
                     </div>
-                        
-				    <?php echo pMostrarModalContactar(); ?>
 
 					</div>
 
@@ -243,6 +243,7 @@
 
 		<!-- Examples -->
 		<script src="assets/javascripts/dashboard/examples.dashboard.js"></script>
+		<script src="assets/javascripts/ui-elements/examples.modals.js"></script>
 
 	</body>
 </html>
