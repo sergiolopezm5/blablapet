@@ -10,8 +10,7 @@
     if(isset($_SESSION['USER'])) {
 
         ## Funciones especificas de mailbox
-        include("funciones_sql_mailbox.php");
-        include("funciones_php_mailbox.php");
+        
 
 ?>
 
