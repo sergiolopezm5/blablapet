@@ -98,13 +98,11 @@ if(!isset($_SESSION)) {
 			<section id="intro" class="main style1 dark fullscreen" style="height:715px;">
 				<div class="content">
 					<header>
-						<h2>Hey.</h2>
+						<h2>Hola.</h2>
 					</header>
-					<p>Welcome to <strong>Big Picture</strong> a responsive site template designed
-					by <a href="https://html5up.net">HTML5 UP</a>, built on <a href="http://skel.io">Skel</a>,
-					and released for free under the <a href="https://html5up.net/license">Creative Commons Attribution license</a>.</p>
+					<p>Bienvenido a <strong>BlaBlaPet</strong>, la nueva plataforma de adopción y cuidado de mascotas.</p>
 					<footer>
-						<a href="#one" class="button style2 down">More</a>
+						<a href="#one" class="button style2 down">Siguiente</a>
 					</footer>
 				</div>
 			</section>
@@ -113,36 +111,30 @@ if(!isset($_SESSION)) {
 			<section id="one" class="main style2 right dark fullscreen" style="height:736px;">
 				<div class="content box style2">
 					<header>
-						<h2>What I Do</h2>
+						<h2>¿Qué hacemos?</h2>
 					</header>
-					<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
-					id varius justo euismod in. Curabitur egestas consectetur magna.</p>
+					<p>Nos encargamos de poner en contacto personas que necesiten a alguien que se encargue de su mascota con otras que se ofrezcan a cuidar de ellas.</p>
 				</div>
-				<a href="#two" class="button style2 down anchored">Next</a>
+				<a href="#two" class="button style2 down anchored">Siguiente</a>
 			</section>
 
 		<!-- Two -->
 			<section id="two" class="main style2 left dark fullscreen" style="height:736px;">
 				<div class="content box style2">
 					<header>
-						<h2>Who I Am</h2>
+						<h2>¿Qué nos motiva?</h2>
 					</header>
-					<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
-					id varius justo euismod in. Curabitur egestas consectetur magna.</p>
+					<p>Creemos que el tener que dejar con otra persona a una mascota es un duro paso, y queremos garantizar que los dueños estén seguros de que dejan a su mascota con una buena persona, y que los animales tendrán buena calidad de vida.</p>
 				</div>
-				<a href="#work" class="button style2 down anchored">Next</a>
+				<a href="#work" class="button style2 down anchored">Siguiente</a>
 			</section>
 
 		<!-- Work -->
 			<section id="work" class="main style3 primary">
 				<div class="content">
 					<header>
-						<h2>Experiencias</h2>
-						<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-						Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
-						arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.</p>
+						<h2>¿Quiénes somos?</h2>
+						<p>Somos estudiantes de Ingeniería Telemática en la UPCT y, sobretodo, amantes de los animales.</p>
 					</header>
 
 					
@@ -155,7 +147,6 @@ if(!isset($_SESSION)) {
 				<div class="content">
 					<header>
 						<h2> ¡ Únete ! </h2>
-						<p>Blablapet blablapet blablapet blablapet blablapet</p>
 					</header>
 					<div class="box">
 					<h3> ¿Tú mascota necesita despejarse? Dale un paseo </h3>
@@ -168,16 +159,6 @@ if(!isset($_SESSION)) {
 						</form>
 					</div>
 					<br>
-					<div class="box">
-						<form method="post" action="#">
-							<div class="field half first"><input type="text" name="name" placeholder="Name" /></div>
-							<div class="field half"><input type="email" name="email" placeholder="Email" /></div>
-							<div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
-							<ul class="actions">
-								<li><input type="submit" value="Send Message" /></li>
-							</ul>
-						</form>
-					</div>
 				</div>
 			</section>
 
