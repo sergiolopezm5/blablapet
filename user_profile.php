@@ -112,14 +112,13 @@
 
 					<div class="row">
 						<div class="col-md-4 col-lg-3">
-
+]
 							<section class="panel">
 								<div class="panel-body">
 									<div class="thumb-info mb-md">
 										<img src="assets/images/!logged-user.jpg" class="rounded img-responsive" alt="John Doe">
 										<div class="thumb-info-title">
-											<span class="thumb-info-inner">John Doe</span>
-											<span class="thumb-info-type">CEO</span>
+											<span class="thumb-info-inner"><?php echo $datos[1] ?></span>
 										</div>
 									</div>
 
@@ -127,7 +126,7 @@
 									<hr class="dotted short">
 
 									<h6 class="text-muted">Sobre tí</h6>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis vulputate quam. Interdum et malesuada</p>
+									<p><?php echo $datos[7] ?></p>
 									<hr class="dotted short">
 
 
@@ -162,10 +161,12 @@
 														<input type="text" class="form-control" id="nombremascota">
 													</div>
 												</div>
+                                                <br>
+                                                <br>
 												<div class="form-group">
 													<label class="col-md-3 control-label" for="profileLastName">Animal</label>
 													<div class="col-md-8">
-														<select name="tipo">
+														<select name="tipo" id=tipo>
 
                                                                 <option value="1">Perro</option>
 
@@ -182,7 +183,7 @@
 												<div class="form-group">
 													<label class="col-md-3 control-label" for="profileAddress">Tamano</label>
 													<div class="col-md-8">
-                                                        <select name="tamano">
+                                                        <select name="tamano" id="tamano">
 
                                                                 <option value="1">S</option>
 
@@ -199,7 +200,19 @@
                                                 <div class="form-group">
 													<label class="col-md-3 control-label" for="profileAddress">Agresividad</label>
 													<div class="col-md-8">
-														<input type="text" class="form-control" id="agresividad">
+														<select name="agresividad" id="agresividad">
+
+                                                                <option value="1">Muy tranquilo</option>
+
+                                                                <option value="2">Tranquilo</option>
+
+                                                                <option value="3">Normal</option>
+                                                            
+                                                                <option value="4">Agresivo</option>
+                                                            
+                                                                <option value="5">Muy agresivo</option>
+
+                                                        </select>
 													</div>
 												</div>
 											</fieldset>
@@ -232,19 +245,13 @@
 												<div class="form-group">
 													<label class="col-md-3 control-label" for="profileFirstName">Nombre</label>
 													<div class="col-md-8">
-														<input type="text" class="form-control" id="nombre">
+														<input type="text" class="form-control" id="nombre"  value="<?php echo $datos[1]?>">
 													</div>
 												</div>
 												<div class="form-group">
-													<label class="col-md-3 control-label" for="profileLastName">Apellidos</label>
+													<label class="col-md-3 control-label" for="profileAddress">E-Mail</label>
 													<div class="col-md-8">
-														<input type="text" class="form-control" id="apellido">
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-md-3 control-label" for="profileAddress">Nick Usuario</label>
-													<div class="col-md-8">
-														<input type="text" class="form-control" id="usuario">
+														<input type="text" class="form-control" id="mail" value="<?php echo $datos[2]?>">
 													</div>
 												</div>
 												<div class="form-group">
@@ -307,7 +314,7 @@
                                                     </select>
                                                     </div>
 													<div class="col-md-8">
-														<input type="text" class="form-control" id="provincia">
+														<input type="text" class="form-control" id="provincia" style="visibility: hidden;">
 													</div>
 												</div>
 											</fieldset>
@@ -317,7 +324,7 @@
 												<div class="form-group">
 													<label class="col-md-3 control-label" for="profileBio">Biografía</label>
 													<div class="col-md-8">
-														<textarea class="form-control" rows="3" id="profileBio"></textarea>
+														<textarea class="form-control" rows="3" id="profileBio"><?php echo $datos[7] ?></textarea>
 													</div>
 												</div>
 											</fieldset>
