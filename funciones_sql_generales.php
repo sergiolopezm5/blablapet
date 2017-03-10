@@ -3,13 +3,14 @@
 function conectarDDBB() 
 {
     try {
-        $pdo = new PDO('mysql:host=localhost:3306;dbname=BlaBlaPet', 'root','root');
+        $pdo = new PDO('mysql:host=127.0.0.1;dbname=blablapet', 'root','');
     } catch (PDOException $e) {
         echo 'Connection failed: ' . $e->getMessage();
     }
     return $pdo;
 
 }
+
 
 function sGetDatosNotificacion($codigo_notificacion) 
 {
