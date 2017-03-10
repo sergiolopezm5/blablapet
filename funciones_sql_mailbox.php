@@ -39,6 +39,14 @@ function sNumMensajesNuevos($iduser){
     return $resultado4[0];
 }
 
+function sObtenerMensaje($idmensaje){
+    $conexion = conectarDDBB();
+    $query5 = $conexion->prepare('SELECT * FROM Mensajes WHERE ID like :id ');
+	$query5 ->execute(array(':id' => $idmensaje  ));
+    $resultado5 = $query5->fetch();
+    return $resultado5;
+}
+
 
 
 
