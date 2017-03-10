@@ -9,6 +9,10 @@
 
     sEnviarMensaje($_POST['idemisor'], $_POST['idreceptor'], $_POST['contenido']);
 
+    /*echo $_POST['idemisor'];
+    echo $_POST['idreceptor'];
+    echo  $_POST['contenido'];*/
+
     header("Location: mailbox-inbox.php");
 
 ?>

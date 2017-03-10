@@ -80,17 +80,17 @@ function pMostrarMensaje(){
       
        
 
-        return $contenido . pFormEnviarMensaje($mensaje["ID_EMISOR"]);
+        return $contenido . pFormEnviarMensaje($mensaje["ID_EMISOR"], $mensaje["ID_RECEPTOR"]);
 
 }
 
-function pFormEnviarMensaje($destino){
+function pFormEnviarMensaje($destino, $origen){
 
     $form = '<div class="compose" style="margin-left:20px; margin-right:20px;">
 										<form class="form-horizontal form-bordered" method = "post" action="nuevomensaje.php">
 											<div class="form-group">
 												<textarea class="form-control" rows="3" name="contenido"  data-plugin-textarea-autosize> </textarea>
-											    <input type="hidden" name="idemisor" value="'.$_GET['id'].'">
+											    <input type="hidden" name="idemisor" value="'.$origen.'">
                                                  <input type="hidden" name="idreceptor" value="'.$destino.'">
                                                 <button class="mb-xs mt-xs mr-xs btn btn-primary" type="submit">
 													Enviar
