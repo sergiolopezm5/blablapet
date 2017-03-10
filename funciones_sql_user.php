@@ -20,19 +20,15 @@ function sGetMascotas($ID)
     $query -> execute(array(':id' => $ID));
     while($resultado = $query->fetch()){
         
+        echo "Entra en el bucle";
+        print_r($resultado);
          $text .= '<fieldset>
 												
             
             
-            <div class="form-group" onclick="editarMascota('.$resultado[0].')">
+            <div class="form-group" onclick="editarMascota('.$resultado['ID'].')">
             
-            <label class="col-md-3 control-label" for="profileFirstName">'.$resultado[2].'</label>
-            
-                <div class="col-md-8">
-            
-                <input type="text" class="form-control" id="profileFirstName">
-                
-                </div>
+            <label class="col-md-3 control-label" for="profileFirstName">'.$resultado['NOMBRE'].'</label>
 												
                 </div>
 											
