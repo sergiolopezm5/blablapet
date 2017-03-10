@@ -2,9 +2,16 @@
 
     include("funciones_sql_generales.php");
     include("funciones_php_generales.php");
-
-    include("funciones_sql_mailbox.php");
-    include("funciones_php_mailbox.php");
+    
+    if(!isset($_SESSION)) {
+        session_start();
+    }
+    
+    if(isset($_SESSION['USER'])) {
+        
+        ## Funciones generales de mailbox
+        include("funciones_sql_mailbox.php");
+        include("funciones_php_mailbox.php");
 
 ?>
 
@@ -373,3 +380,7 @@
 
 	</body>
 </html>
+
+<?php } else {
+        header("Location: index.php");
+    } ?>
