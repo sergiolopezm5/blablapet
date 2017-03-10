@@ -16,23 +16,21 @@ function sGetMascotas($ID)
 {
     $conexion = conectarDDBB();
     $text = "";
-    $query = $conexion->prepare('SELECT * FROM mascotas WHERE ID_USUARIO like: id');
+    $query = $conexion->prepare('SELECT * FROM mascotas WHERE ID_USUARIO like :id');
     $query -> execute(array(':id' => $ID));
     while($resultado = $query->fetch()){
         
-        echo "Entra en el bucle";
-        print_r($resultado);
-         $text .= '<fieldset>
+         $text .= '<form action="editar-mascota.php?id='.$resultado[0].'" class="form-horizontal" method="get"><fieldset>
 												
             
-            
-            <div class="form-group" onclick="editarMascota('.$resultado['ID'].')">
+            <form class="form-horizontal" method="get">
+            <div class="form-group">
             
             <label class="col-md-3 control-label" for="profileFirstName">'.$resultado['NOMBRE'].'</label>
-												
+					<input type="submit" />									
                 </div>
-											
-                </fieldset>';
+									
+                </fieldset></form><hr class="dotted tall">';
        
                                                         
                                                         
