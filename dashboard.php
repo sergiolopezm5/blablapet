@@ -3,8 +3,15 @@
     include("funciones_sql_generales.php");
     include("funciones_php_generales.php");
 
-    //include("funciones_sql_dashboard.php");
-    include("funciones_php_dashboard.php");
+    if(!isset($_SESSION)) {
+        session_start();
+    }
+    
+    if(isset($_SESSION['USER'])) {
+
+        //include("funciones_sql_dashboard.php");
+        include("funciones_php_dashboard.php");
+
 
 ?>
 
@@ -344,3 +351,7 @@
 
 	</body>
 </html>
+
+<?php } else {
+        header("Location: index.php");
+    } ?>
