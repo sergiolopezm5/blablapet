@@ -268,46 +268,19 @@
 								</div>
 							</menu>
 							
-								<div class="inner-body mailbox-email">
-								<div class="mailbox-email-header mb-lg">
-								<!--	<h3 class="mailbox-email-subject m-none text-weight-light">
-										<?php echo sObtenerMensaje("1")["FECHA"] ?>
-									</h3> -->
+							<div class="inner-body mailbox-email">
+								
+								<?php echo pMostrarMensaje() ?>
 							
-									<p class="mt-lg mb-none text-md">From <a href="#"><?php echo sObtenerMensaje("1")["ID_EMISOR"] ?></a> to <a href="#">You</a>, started on July, 05, 2016</p>
-								</div>
-								<div class="mailbox-email-container">
-									<div class="mailbox-email-screen">
-										<div class="panel">
-											<div class="panel-heading">
-												<div class="panel-actions">
-													<a href="#" class="panel-action panel-action-toggle" data-panel-toggle></a>
-													<a href="#" class="fa fa-mail-reply"></a>
-													<a href="#" class="fa fa-mail-reply-all"></a>
-													<a href="#" class="fa fa-star-o"></a>
-												</div>
-							
-												<p class="panel-title"><?php echo sObtenerMensaje("1")["ID_EMISOR"] ?><i class="fa fa-angle-right fa-fw"></i> You</p>
+									<div class="compose" style="margin-left:20px; margin-right:20px;">
+										<form class="form-horizontal form-bordered" method="get">
+											<div class="form-group">
+												<textarea class="form-control" rows="3"  data-plugin-textarea-autosize> </textarea>
+												<button class="mb-xs mt-xs mr-xs btn btn-primary" type="submit">
+													Enviar
+												</button>
 											</div>
-											<div class="panel-body">
-											<?php echo sObtenerMensaje("1")["MENSAJE"] ?>
-												</div>
-											<div class="panel-footer">
-												<p class="m-none"><small><?php echo sObtenerMensaje("1")["FECHA"]?> </small></p>
-											</div>
-										</div>
-							
-									
-							
-									<div class="compose">
-										<div id="compose-field" class="compose">
-										</div>
-										<div class="text-right mt-md">
-											<a href="#" class="btn btn-primary">
-												<i class="fa fa-send mr-xs"></i>
-												Send
-											</a>
-										</div>
+										</form>
 									</div>
 								</div>
 							</div>

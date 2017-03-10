@@ -1,6 +1,6 @@
 <?php
 
-function pMostrarListaMensajes($ID_EMISOR, $MENSAJE, $FECHA, $ESTADO) {
+function pMostrarListaMensajes($ID, $ID_EMISOR, $MENSAJE, $FECHA, $ESTADO) {
     
     $devolver = '';
     if($ESTADO == "1"){
@@ -9,7 +9,7 @@ function pMostrarListaMensajes($ID_EMISOR, $MENSAJE, $FECHA, $ESTADO) {
         $devolver = '<li class="unread">';
     }
            $devolver .='
-                        <a href="mailbox-email.html">
+                        <a href="mailbox-msg.php?id='.$ID.'">
                             <!--<i class="mail-label" style="border-color: #EA4C89"></i>-->
 
                             <div class="col-sender">
@@ -35,5 +35,31 @@ function pMostrarListaMensajes($ID_EMISOR, $MENSAJE, $FECHA, $ESTADO) {
     return $devolver;
 }
 
+function pMostrarMensaje(){
+
+    $mensaje = sObtenerMensaje($_GET['id']);
+
+    $contenido = '  <div class="mailbox-email-container">
+                        <div class="mailbox-email-screen">
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <div class="panel-actions">
+                                        <a href="#" class="panel-action panel-action-toggle" data-panel-toggle></a>
+                                        <a href="#" class="fa fa-mail-reply"></a>
+                                        <a href="#" class="fa fa-mail-reply-all"></a>
+                                        <a href="#" class="fa fa-star-o"></a>
+                                    </div>
+                                <p class="panel-title">'. sGetNombreUsuario($mensaje["ID_EMISOR"]) .'<i class="fa fa-angle-right fa-fw"></i> You</p>
+                            </div>
+                            <div class="panel-body">'. $mensaje["MENSAJE"].'</div>
+                            <div class="panel-footer">
+                                <p class="m-none"><small>'.  $mensaje["FECHA"].' </small></p>
+                            </div>
+                        </div>
+                        </div>';
+                
+        return $contenido;
+
+}
 
 ?>
