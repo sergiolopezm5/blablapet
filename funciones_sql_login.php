@@ -29,6 +29,7 @@ function sComprobarUsuarioRegistrado($mail, $pass)
         $_SESSION['USER'] = $login['ID'];
         $_SESSION['NAME'] = $login['NOMBRE'];
         $_SESSION['MAIL'] = $login['MAIL'];
+        $_SESSION['STATE'] = $login['PROVINCIA'];
         $devolver = 'PL000'; //Correcto
     } else{
         $devolver = 'PL002'; // Error al establecer sesion

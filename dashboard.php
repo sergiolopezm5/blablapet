@@ -128,52 +128,90 @@
 						<div class="col-md-4 col-lg-3">
 							<section class="panel"> 
 								<div class="panel-body">
-									<div class="thumb-info mb-md">
-										<img src="assets/images/!logged-user.jpg" class="rounded img-responsive" alt="John Doe">
-										<div class="thumb-info-title">
-											<span class="thumb-info-inner">John Doe</span>
-											<span class="thumb-info-type">CEO</span>
-										</div>
-									</div>
+                                    <form>
+                                        <div class="form-group mb-lg">
+                                
+                                            <label>Provincia</label>
+                                            <select class="form-control mb-md">
+                                                <option value="A Coruña" <?php if($_SESSION['STATE'] == 'A Coruña') { echo 'selected="selected"';} ?>>A coruña</option>
+                                                <option value="Alava" <?php if($_SESSION['STATE'] == 'Alava') { echo 'selected="selected"';} ?>>Alava</option>
+                                                <option value="Albacete" <?php if($_SESSION['STATE'] == 'Albacete') { echo 'selected="selected"';} ?>>Albacete</option>
+                                                <option value="Alicante" <?php if($_SESSION['STATE'] == 'Alicante') { echo 'selected="selected"';} ?>>Alicante</option>
+                                                <option value="Almeria" <?php if($_SESSION['STATE'] == 'Almeria') { echo 'selected="selected"';} ?>>Almeria</option>
+                                                <option value="Asturias" <?php if($_SESSION['STATE'] == 'Asturias') { echo 'selected="selected"';} ?>>Asturias</option>
+                                                <option value="Avila" <?php if($_SESSION['STATE'] == 'Avila') { echo 'selected="selected"';} ?>>Avila</option>
+                                                <option value="Badajoz" <?php if($_SESSION['STATE'] == 'Badajoz') { echo 'selected="selected"';} ?>>Badajoz</option>
+                                                <option value="Baleares" <?php if($_SESSION['STATE'] == 'Baleares') { echo 'selected="selected"';} ?>>Baleares</option>
+                                                <option value="Barcelona" <?php if($_SESSION['STATE'] == 'Barcelona') { echo 'selected="selected"';} ?>>Barcelona</option>
+                                                <option value="Burgos" <?php if($_SESSION['STATE'] == 'Burgos') { echo 'selected="selected"';} ?>>Burgos</option>
+                                                <option value="Caceres" <?php if($_SESSION['STATE'] == 'Caceres') { echo 'selected="selected"';} ?>>Caceres</option>
+                                                <option value="Cadiz" <?php if($_SESSION['STATE'] == 'Cadiz') { echo 'selected="selected"';} ?>>Cadiz</option>
+                                                <option value="Cantabria" <?php if($_SESSION['STATE'] == 'Cantabria') { echo 'selected="selected"';} ?>>Cantabria</option>
+                                                <option value="Castellon" <?php if($_SESSION['STATE'] == 'Castellon') { echo 'selected="selected"';} ?>>Castellon</option>
+                                                <option value="Ceuta" <?php if($_SESSION['STATE'] == 'Ceuta') { echo 'selected="selected"';} ?>>Ceuta</option>
+                                                <option value="Cuidad Real" <?php if($_SESSION['STATE'] == 'Ciudad Real') { echo 'selected="selected"';} ?>>Ciudad Real</option>
+                                                <option value="Cordoba" <?php if($_SESSION['STATE'] == 'Cordoba') { echo 'selected="selected"';} ?>>Cordoba</option>
+                                                <option value="Cuenca" <?php if($_SESSION['STATE'] == 'Cuenca') { echo 'selected="selected"';} ?>>Cuenca</option>
+                                                <option value="Girona" <?php if($_SESSION['STATE'] == 'Girona') { echo 'selected="selected"';} ?>>Girona</option>
+                                                <option value="Granada" <?php if($_SESSION['STATE'] == 'Granada') { echo 'selected="selected"';} ?>>Granada</option>
+                                                <option value="Guadalajara" <?php if($_SESSION['STATE'] == 'Guadalajara') { echo 'selected="selected"';} ?>>Guadalajara</option>
+                                                <option value="Guipuzcoa" <?php if($_SESSION['STATE'] == 'Guipuzcoa') { echo 'selected="selected"';} ?>>Guipuzcoa</option>
+                                                <option value="Huelva" <?php if($_SESSION['STATE'] == 'Huelva') { echo 'selected="selected"';} ?>>Huelva</option>
+                                                <option value="Huesca" <?php if($_SESSION['STATE'] == 'Huesca') { echo 'selected="selected"';} ?>>Huesca</option>
+                                                <option value="Jaen" <?php if($_SESSION['STATE'] == 'Jaen') { echo 'selected="selected"';} ?>>Jaen</option>
+                                                <option value="La Rioja" <?php if($_SESSION['STATE'] == 'La Rioja') { echo 'selected="selected"';} ?>>La rioja</option>
+                                                <option value="Las Palmas" <?php if($_SESSION['STATE'] == 'Las Palmas') { echo 'selected="selected"';} ?>>Las palmas</option>
+                                                <option value="Leon" <?php if($_SESSION['STATE'] == 'Leon') { echo 'selected="selected"';} ?>>Leon</option>
+                                                <option value="Lleida" <?php if($_SESSION['STATE'] == 'Lleida') { echo 'selected="selected"';} ?>>Lleida</option>
+                                                <option value="Lugo" <?php if($_SESSION['STATE'] == 'Lugo') { echo 'selected="selected"';} ?>>Lugo</option>
+                                                <option value="Madrid" <?php if($_SESSION['STATE'] == 'Madrid') { echo 'selected="selected"';} ?>>Madrid</option>
+                                                <option value="Malaga" <?php if($_SESSION['STATE'] == 'Malaga') { echo 'selected="selected"';} ?>>Malaga</option>
+                                                <option value="Melilla" <?php if($_SESSION['STATE'] == 'Melilla') { echo 'selected="selected"';} ?>>Melilla</option>
+                                                <option value="Murcia" <?php if($_SESSION['STATE'] == 'Murcia') { echo 'selected="selected"';} ?>>Murcia</option>
+                                                <option value="Navarra" <?php if($_SESSION['STATE'] == 'Navarra') { echo 'selected="selected"';} ?>>Navarra</option>
+                                                <option value="Ourense" <?php if($_SESSION['STATE'] == 'Ourense') { echo 'selected="selected"';} ?>>Ourense</option>
+                                                <option value="Palencia" <?php if($_SESSION['STATE'] == 'Palencia') { echo 'selected="selected"';} ?>>Palencia</option>
+                                                <option value="Pontevedra" <?php if($_SESSION['STATE'] == 'Pontevedra') { echo 'selected="selected"';} ?>>Pontevedra</option>
+                                                <option value="Salamanca" <?php if($_SESSION['STATE'] == 'Salamanca') { echo 'selected="selected"';} ?>>Salamanca</option>
+                                                <option value="Santa cruz de teneriza" <?php if($_SESSION['STATE'] == 'Santa cruz de tenerife') { echo 'selected="selected"';} ?>>Santa cruz de tenerife</option>
+                                                <option value="Segovia" <?php if($_SESSION['STATE'] == 'Segovia') { echo 'selected="selected"';} ?>>Segovia</option>
+                                                <option value="Sevilla" <?php if($_SESSION['STATE'] == 'Sevilla') { echo 'selected="selected"';} ?>>Sevilla</option>
+                                                <option value="Soria" <?php if($_SESSION['STATE'] == 'Soria') { echo 'selected="selected"';} ?>>Soria</option>
+                                                <option value="Tarragona" <?php if($_SESSION['STATE'] == 'Tarragona') { echo 'selected="selected"';} ?>>Tarragona</option>
+                                                <option value="Teruel" <?php if($_SESSION['STATE'] == 'Teruel') { echo 'selected="selected"';} ?>>Teruel</option>
+                                                <option value="Toledo" <?php if($_SESSION['STATE'] == 'Toledo') { echo 'selected="selected"';} ?>>Toledo</option>
+                                                <option value="Valencia" <?php if($_SESSION['STATE'] == 'Valencia') { echo 'selected="selected"';} ?>>Valencia</option>
+                                                <option value="Valladolid" <?php if($_SESSION['STATE'] == 'Valladolid') { echo 'selected="selected"';} ?>>Valladolid</option>
+                                                <option value="Vizcaya" <?php if($_SESSION['STATE'] == 'Vizcaya') { echo 'selected="selected"';} ?>>Vizcaya</option>
+                                                <option value="Zamora" <?php if($_SESSION['STATE'] == 'Zamora') { echo 'selected="selected"';} ?>>Zamora</option>
+                                                <option value="Zaragoza" <?php if($_SESSION['STATE'] == 'Zaragoza') { echo 'selected="selected"';} ?>>Zaragoza</option>
+								            </select>
+                                        </div>
 
-									<div class="widget-toggle-expand mb-md">
-										<div class="widget-header">
-											<h6>Profile Completion</h6>
-											<div class="widget-toggle">+</div>
-										</div>
-										<div class="widget-content-collapsed">
-											<div class="progress progress-xs light">
-												<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-													60%
-												</div>
-											</div>
-										</div>
-										<div class="widget-content-expanded">
-											<ul class="simple-todo-list">
-												<li class="completed">Update Profile Picture</li>
-												<li class="completed">Change Personal Information</li>
-												<li>Update Social Media</li>
-												<li>Follow Someone</li>
-											</ul>
-										</div>
-									</div>
+                                        <div class="form-group mb-lg">
+                                            <label>Tamaño</label>
+                                            <select class="form-control mb-md">
+                                                <option value="1">S</option>
+                                                <option value="2">M</option>
+                                                <option selected="selected" value="3">L</option>
+                                            </select>
+                                        </div>
 
-									<hr class="dotted short">
-
-									<h6 class="text-muted">About</h6>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis vulputate quam. Interdum et malesuada</p>
-									<div class="clearfix">
-										<a class="text-uppercase text-muted pull-right" href="#">(View All)</a>
-									</div>
-
-									<hr class="dotted short">
-
-									<div class="social-icons-list">
-										<a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.facebook.com" data-original-title="Facebook"><i class="fa fa-facebook"></i><span>Facebook</span></a>
-										<a rel="tooltip" data-placement="bottom" href="http://www.twitter.com" data-original-title="Twitter"><i class="fa fa-twitter"></i><span>Twitter</span></a>
-										<a rel="tooltip" data-placement="bottom" href="http://www.linkedin.com" data-original-title="Linkedin"><i class="fa fa-linkedin"></i><span>Linkedin</span></a>
-									</div>
-
+                                        <div class="form-group mb-lg">
+                                            <label>E-mail</label>
+                                            <select class="form-control mb-md">
+                                                <option value="1">Muy tranquilo</option>
+                                                <option value="2">Tranquilo</option>
+                                                <option value="3">Normal</option>
+                                                <option value="4">Agresivo</option>
+                                                <option selected="selected" value="5">Muy agresivo</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group mb-lg">
+                                            <button type="submit" name="submit" class="btn btn-primary hidden-xs">Filtrar</button>
+                                        </div>
+                                    
+                                    </form>
 								</div>
 							</section>
 

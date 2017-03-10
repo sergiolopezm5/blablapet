@@ -256,59 +256,58 @@
 													<label class="col-md-3 control-label" for="profileCompany">Provincia</label>
                                                     <div class="col-md-8">
                                                     <select name="provincia">
-	                                                       <option value='1'>(Seleccionar)</option>
-	                                                       <option value='2'>Álava</option>
-	                                                       <option value='3'>Albacete</option>
-	                                                       <option value='4'>Alicante/Alacant</option>
-	                                                       <option value='5'>Almería</option>
-	                                                       <option value='6'>Asturias</option>
-	                                                       <option value='7'>Ávila</option>
-	                                                       <option value='8'>Badajoz</option>
-	                                                       <option value='9'>Barcelona</option>
-	                                                       <option value='10'>Burgos</option>
-	                                                       <option value='11'>Cáceres</option>
-	                                                       <option value='12'>Cádiz</option>
-	                                                       <option value='13'>Cantabria</option>
-	                                                       <option value='14'>Castellón</option>
-	                                                       <option value='15'>Ceuta</option>
-                                                           <option value='16'>Ciudad Real</option>
-	                                                       <option value='17'>Córdoba</option>
-	                                                       <option value='18'>Cuenca</option>
-	                                                       <option value='19'>Girona</option>
-	                                                       <option value='20'>Las Palmas</option>
-	                                                       <option value='21'>Granada</option>
-	                                                       <option value='22'>Guadalajara</option>
-	                                                       <option value='23'>Guipúzcoa</option>
-	                                                       <option value='24'>Huelva</option>
-	                                                       <option value='25'>Huesca</option>
-	                                                       <option value='26'>Islas Baleares</option>
-	                                                       <option value='27'>Jaén</option>
-	                                                       <option value='28'>A Coruña</option>
-	                                                       <option value='29'>La Rioja</option>
-	                                                       <option value='30'>León</option>
-	                                                       <option value='31'>Lleida</option>
-	                                                       <option value='32'>Lugo</option>
-	                                                       <option value='33'>Madrid</option>
-	                                                       <option value='34'>Málaga</option>
-	                                                       <option value='35'>Melilla</option>
-	                                                       <option value='36'>Murcia</option>
-	                                                       <option value='37'>Navarra</option>
-	                                                       <option value='38'>Ourense</option>
-	                                                       <option value='39'>Palencia</option>
-	                                                       <option value='40'>Pontevedra</option>
-	                                                       <option value='41'>Salamanca</option>
-	                                                       <option value='42'>Segovia</option>
-	                                                       <option value='43'>Sevilla</option>
-	                                                       <option value='44'>Soria</option>
-	                                                       <option value='45'>Tarragona</option>
-	                                                       <option value='46'>Santa Cruz de Tenerife</option>
-	                                                       <option value='47'>Teruel</option>
-	                                                       <option value='48'>Toledo</option>
-	                                                       <option value='49'>Valencia</option>
-	                                                       <option value='50'>Valladolid</option>
-	                                                       <option value='51'>Vizcaya</option>
-	                                                       <option value='52'>Zamora</option>
-	                                                       <option value='53'>Zaragoza</option>
+	                                                       <option value="A Coruña" <?php if($_SESSION['STATE'] == 'A Coruña') { echo 'selected="selected"';} ?>>A coruña</option>
+                                                        <option value="Alava" <?php if($_SESSION['STATE'] == 'Alava') { echo 'selected="selected"';} ?>>Alava</option>
+                                                        <option value="Albacete" <?php if($_SESSION['STATE'] == 'Albacete') { echo 'selected="selected"';} ?>>Albacete</option>
+                                                        <option value="Alicante" <?php if($_SESSION['STATE'] == 'Alicante') { echo 'selected="selected"';} ?>>Alicante</option>
+                                                        <option value="Almeria" <?php if($_SESSION['STATE'] == 'Almeria') { echo 'selected="selected"';} ?>>Almeria</option>
+                                                        <option value="Asturias" <?php if($_SESSION['STATE'] == 'Asturias') { echo 'selected="selected"';} ?>>Asturias</option>
+                                                        <option value="Avila" <?php if($_SESSION['STATE'] == 'Avila') { echo 'selected="selected"';} ?>>Avila</option>
+                                                        <option value="Badajoz" <?php if($_SESSION['STATE'] == 'Badajoz') { echo 'selected="selected"';} ?>>Badajoz</option>
+                                                        <option value="Baleares" <?php if($_SESSION['STATE'] == 'Baleares') { echo 'selected="selected"';} ?>>Baleares</option>
+                                                        <option value="Barcelona" <?php if($_SESSION['STATE'] == 'Barcelona') { echo 'selected="selected"';} ?>>Barcelona</option>
+                                                        <option value="Burgos" <?php if($_SESSION['STATE'] == 'Burgos') { echo 'selected="selected"';} ?>>Burgos</option>
+                                                        <option value="Caceres" <?php if($_SESSION['STATE'] == 'Caceres') { echo 'selected="selected"';} ?>>Caceres</option>
+                                                        <option value="Cadiz" <?php if($_SESSION['STATE'] == 'Cadiz') { echo 'selected="selected"';} ?>>Cadiz</option>
+                                                        <option value="Cantabria" <?php if($_SESSION['STATE'] == 'Cantabria') { echo 'selected="selected"';} ?>>Cantabria</option>
+                                                        <option value="Castellon" <?php if($_SESSION['STATE'] == 'Castellon') { echo 'selected="selected"';} ?>>Castellon</option>
+                                                        <option value="Ceuta" <?php if($_SESSION['STATE'] == 'Ceuta') { echo 'selected="selected"';} ?>>Ceuta</option>
+                                                        <option value="Cuidad Real" <?php if($_SESSION['STATE'] == 'Ciudad Real') { echo 'selected="selected"';} ?>>Ciudad Real</option>
+                                                        <option value="Cordoba" <?php if($_SESSION['STATE'] == 'Cordoba') { echo 'selected="selected"';} ?>>Cordoba</option>
+                                                        <option value="Cuenca" <?php if($_SESSION['STATE'] == 'Cuenca') { echo 'selected="selected"';} ?>>Cuenca</option>
+                                                        <option value="Girona" <?php if($_SESSION['STATE'] == 'Girona') { echo 'selected="selected"';} ?>>Girona</option>
+                                                        <option value="Granada" <?php if($_SESSION['STATE'] == 'Granada') { echo 'selected="selected"';} ?>>Granada</option>
+                                                        <option value="Guadalajara" <?php if($_SESSION['STATE'] == 'Guadalajara') { echo 'selected="selected"';} ?>>Guadalajara</option>
+                                                        <option value="Guipuzcoa" <?php if($_SESSION['STATE'] == 'Guipuzcoa') { echo 'selected="selected"';} ?>>Guipuzcoa</option>
+                                                        <option value="Huelva" <?php if($_SESSION['STATE'] == 'Huelva') { echo 'selected="selected"';} ?>>Huelva</option>
+                                                        <option value="Huesca" <?php if($_SESSION['STATE'] == 'Huesca') { echo 'selected="selected"';} ?>>Huesca</option>
+                                                        <option value="Jaen" <?php if($_SESSION['STATE'] == 'Jaen') { echo 'selected="selected"';} ?>>Jaen</option>
+                                                        <option value="La Rioja" <?php if($_SESSION['STATE'] == 'La Rioja') { echo 'selected="selected"';} ?>>La rioja</option>
+                                                        <option value="Las Palmas" <?php if($_SESSION['STATE'] == 'Las Palmas') { echo 'selected="selected"';} ?>>Las palmas</option>
+                                                        <option value="Leon" <?php if($_SESSION['STATE'] == 'Leon') { echo 'selected="selected"';} ?>>Leon</option>
+                                                        <option value="Lleida" <?php if($_SESSION['STATE'] == 'Lleida') { echo 'selected="selected"';} ?>>Lleida</option>
+                                                        <option value="Lugo" <?php if($_SESSION['STATE'] == 'Lugo') { echo 'selected="selected"';} ?>>Lugo</option>
+                                                        <option value="Madrid" <?php if($_SESSION['STATE'] == 'Madrid') { echo 'selected="selected"';} ?>>Madrid</option>
+                                                        <option value="Malaga" <?php if($_SESSION['STATE'] == 'Malaga') { echo 'selected="selected"';} ?>>Malaga</option>
+                                                        <option value="Melilla" <?php if($_SESSION['STATE'] == 'Melilla') { echo 'selected="selected"';} ?>>Melilla</option>
+                                                        <option value="Murcia" <?php if($_SESSION['STATE'] == 'Murcia') { echo 'selected="selected"';} ?>>Murcia</option>
+                                                        <option value="Navarra" <?php if($_SESSION['STATE'] == 'Navarra') { echo 'selected="selected"';} ?>>Navarra</option>
+                                                        <option value="Ourense" <?php if($_SESSION['STATE'] == 'Ourense') { echo 'selected="selected"';} ?>>Ourense</option>
+                                                        <option value="Palencia" <?php if($_SESSION['STATE'] == 'Palencia') { echo 'selected="selected"';} ?>>Palencia</option>
+                                                        <option value="Pontevedra" <?php if($_SESSION['STATE'] == 'Pontevedra') { echo 'selected="selected"';} ?>>Pontevedra</option>
+                                                        <option value="Salamanca" <?php if($_SESSION['STATE'] == 'Salamanca') { echo 'selected="selected"';} ?>>Salamanca</option>
+                                                        <option value="Santa cruz de teneriza" <?php if($_SESSION['STATE'] == 'Santa cruz de tenerife') { echo 'selected="selected"';} ?>>Santa cruz de tenerife</option>
+                                                        <option value="Segovia" <?php if($_SESSION['STATE'] == 'Segovia') { echo 'selected="selected"';} ?>>Segovia</option>
+                                                        <option value="Sevilla" <?php if($_SESSION['STATE'] == 'Sevilla') { echo 'selected="selected"';} ?>>Sevilla</option>
+                                                        <option value="Soria" <?php if($_SESSION['STATE'] == 'Soria') { echo 'selected="selected"';} ?>>Soria</option>
+                                                        <option value="Tarragona" <?php if($_SESSION['STATE'] == 'Tarragona') { echo 'selected="selected"';} ?>>Tarragona</option>
+                                                        <option value="Teruel" <?php if($_SESSION['STATE'] == 'Teruel') { echo 'selected="selected"';} ?>>Teruel</option>
+                                                        <option value="Toledo" <?php if($_SESSION['STATE'] == 'Toledo') { echo 'selected="selected"';} ?>>Toledo</option>
+                                                        <option value="Valencia" <?php if($_SESSION['STATE'] == 'Valencia') { echo 'selected="selected"';} ?>>Valencia</option>
+                                                        <option value="Valladolid" <?php if($_SESSION['STATE'] == 'Valladolid') { echo 'selected="selected"';} ?>>Valladolid</option>
+                                                        <option value="Vizcaya" <?php if($_SESSION['STATE'] == 'Vizcaya') { echo 'selected="selected"';} ?>>Vizcaya</option>
+                                                        <option value="Zamora" <?php if($_SESSION['STATE'] == 'Zamora') { echo 'selected="selected"';} ?>>Zamora</option>
+                                                        <option value="Zaragoza" <?php if($_SESSION['STATE'] == 'Zaragoza') { echo 'selected="selected"';} ?>>Zaragoza</option>
                                                     </select>
                                                     </div>
 												</div>
