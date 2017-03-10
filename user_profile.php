@@ -107,18 +107,23 @@
 
 							<div class="tabs">
 								<ul class="nav nav-tabs tabs-primary">
-									<li class="active">
-										<a href="#overview" data-toggle="tab">Registrar mascota</a>
+                                    <li class="active">
+										<a href="#edit-pet" data-toggle="tab">Tus mascotas</a>
+                                    </li>
+									<li >
+										<a href="#overview" data-toggle="tab">Nueva mascota</a>
 									</li>
 									<li>
-										<a href="#edit" data-toggle="tab">Actualizar perfil</a>
+										<a href="#edit" data-toggle="tab">Actualiza tu perfil</a>
 									</li>
-                                    <li>
-										<a href="#edit-pet" data-toggle="tab">Editar mascota</a>
-                                    </li>
 								</ul>
 								<div class="tab-content">
-									<div id="overview" class="tab-pane active">
+                                    <div id="edit-pet" class="tab-pane  active">
+
+											<?php echo sGetMascotas($ID); ?>
+
+									</div>
+									<div id="overview" class="tab-pane">
 										
                                         <form action="reg-mascota.php" class="form-horizontal" method="POST">
 											<h4 class="mb-xlg">Nueva mascota</h4>
@@ -320,11 +325,6 @@
 											</div>
 
 										</form>
-
-									</div>
-                                    <div id="edit-pet" class="tab-pane">
-											<h4 class="mb-xlg">Mis mascotas</h4>
-											<?php echo sGetMascotas($ID); ?>
 
 									</div>
 								</div>
