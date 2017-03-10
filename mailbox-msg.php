@@ -257,18 +257,16 @@
 												Nuevo mensaje
 											</a>
 							
+											
 											<ul class="list-unstyled mt-xl pt-md">
 												<li>
-													<a href="mailbox-folder.html" class="menu-item ">Recibidos <span class="label label-primary text-weight-normal pull-right"><?php echo sNumMensajesNuevos("2") ?></span></a>
+													<a href="mailbox-inbox.php" class="menu-item ">Recibidos <span class="label label-primary text-weight-normal pull-right"><?php echo sNumMensajesNuevos() ?></span></a>
 												</li>
-												
 												<li>
-													<a href="mailbox-folder.html" class="menu-item">Enviados</a>
+													<a href="mailbox-sent.php" class="menu-item ">Enviados</a>
 												</li>
-												
 												
 											</ul>
-							
 											
 										</div>
 									</div>

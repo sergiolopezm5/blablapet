@@ -39,6 +39,14 @@ function pMostrarMensaje(){
 
     $mensaje = sObtenerMensaje($_GET['id']);
 
+    $useractual = getUserId();
+
+    if($useractual == $mensaje["ID_EMISOR"]){
+        $header = '<p class="panel-title"> Tú <i class="fa fa-angle-right fa-fw"></i> '.sGetNombreUsuario($mensaje["ID_RECEPTOR"]).'</p>';                
+    } else if($useractual == $mensaje["ID_RECEPTOR"]){
+        $header = '<p class="panel-title">'. sGetNombreUsuario($mensaje["ID_EMISOR"]) .'<i class="fa fa-angle-right fa-fw"></i> Tú </p>';              
+    }
+
     $contenido = '  <div class="mailbox-email-container">
                         <div class="mailbox-email-screen">
                             <div class="panel">
@@ -49,15 +57,15 @@ function pMostrarMensaje(){
                                         <a href="#" class="fa fa-mail-reply-all"></a>
                                         <a href="#" class="fa fa-star-o"></a>
                                     </div>
-                                <p class="panel-title">'. sGetNombreUsuario($mensaje["ID_EMISOR"]) .'<i class="fa fa-angle-right fa-fw"></i> You</p>
-                            </div>
+                                    '.$header.'
+                               </div>
                             <div class="panel-body">'. $mensaje["MENSAJE"].'</div>
                             <div class="panel-footer">
                                 <p class="m-none"><small>'.  $mensaje["FECHA"].' </small></p>
                             </div>
                         </div>
                         </div>';
-                
+      
         return $contenido;
 
 }
