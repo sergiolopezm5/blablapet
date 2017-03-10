@@ -10,9 +10,9 @@
     if(isset($_SESSION['USER'])) {
         
         ## Funciones generales de mailbox
-        include("funciones_sql_mailbox.php");
+       /*include("funciones_sql_mailbox.php");
         include("funciones_php_mailbox.php");
-
+*/
 
 ?>
 
