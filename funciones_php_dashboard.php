@@ -7,10 +7,11 @@ function pMostrarCuidadores() {
 
 	while($datos=$row->fetch(PDO::FETCH_ASSOC)){//sacar array en PDO
 
-		  
+        $foto = 'images/users/'.$datos["ID_USUARIO"].'.jpg';
         $devolver .='<div class="col-lg-3 col-sm-6">
                         <div class="plan">
-                            <h3>'.$datos['NOMBRE'].'<span>'.$datos['URL_FOTO'].'</span></h3>
+                            <h3 style="background-image: url('.$foto.'); height:100px; margin-bottom:0px;"></h3>
+                            <h4>'.$datos['NOMBRE'].'</h4>
                             <a class="btn btn-lg btn-primary modal-basic" href="#modalEnviarMensaje">Contactar</a>
                             <ul>
                                 <li><b>Provincia: </b>'.$datos['PROVINCIA'].'</li>

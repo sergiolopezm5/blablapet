@@ -112,7 +112,7 @@
 							<section class="panel">
 								<div class="panel-body">
 									<div class="thumb-info mb-md">
-										<img src="assets/images/!logged-user.jpg" class="rounded img-responsive" alt="John Doe">
+										<img src="images/users/<?php echo $_SESSION['USER'] ?>.jpg" class="rounded img-responsive" alt="John Doe">
 										<div class="thumb-info-title">
 											<span class="thumb-info-inner"><?php echo $datos[1] ?></span>
 										</div>
