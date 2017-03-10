@@ -62,4 +62,20 @@ function pMostrarMensaje(){
 
 }
 
+function pFormEnviarMensaje(){
+
+    $form = '<div class="compose" style="margin-left:20px; margin-right:20px;">
+										<form class="form-horizontal form-bordered" method="get">
+											<div class="form-group">
+												<textarea class="form-control" rows="3"  data-plugin-textarea-autosize> </textarea>
+												<button class="mb-xs mt-xs mr-xs btn btn-primary" type="submit">
+													Enviar
+												</button>
+											</div>
+										</form>
+									</div>';
+
+    return $form;
+}
+
 ?>

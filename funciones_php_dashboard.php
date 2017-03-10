@@ -10,17 +10,43 @@ function pMostrarCuidadores() {
 		  
         $devolver .='<div class="col-lg-3 col-sm-6">
                         <div class="plan">
-                            <h3>'.$datos['NOMBRE'].'<span>$59</span></h3>
-                            <a class="btn btn-lg btn-primary" href="#">Sign up</a>
+                            <h3>'.$datos['NOMBRE'].'<span>'.$datos['URL_FOTO'].'</span></h3>
+                            <a class="btn btn-lg btn-primary" href="#modalEnviarMensaje">Contactar</a>
                             <ul>
-                                <li><b>10GB</b> Disk Space</li>
-                                <li><b>100GB</b> Monthly</li>
-                                <li><b>20</b> Email Accounts</li>
+                                <li><b>Provincia: </b>'.$datos['PROVINCIA'].'</li>
+                                <li><b>Ciudad: </b>'.$datos['CIUDAD'].'</li>
                             </ul>
                         </div>
                     </div>';	
 	}	
     
+    return $devolver;
+}
+
+function pMostrarModalContactar() {
+    $devolver = '<div id="modalEnviarMensaje" class="modal-block modal-block-primary mfp-hide">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            <h2 class="panel-title">Inicia Sesión</h2>
+                        </header>
+                        <div class="panel-body">
+                            <form id="login-form" method="post" action="'.$_SERVER['PHP_SELF'].'" class="form-horizontal mb-lg" novalidate="novalidate">
+                                <div class="form-group mb-lg col-md-12">
+                                    <label>E-mail</label>
+                                    <input name="email-login" type="email" class="form-control input-lg" />
+                                </div>
+                                <div class="form-group mb-lg col-md-12">
+                                    <label>Contraseña</label>
+                                    <input name="pass-login" type="password" class="form-control input-lg" />
+                                </div>
+                                <div class="col-md-12 text-right">
+                                    <button name="submit-login" type="submit" class="btn btn-primary">Entrar</button>
+                                    <button type="reset" class="btn btn-default modal-dismiss">Cancelar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                </div>';
     return $devolver;
 }
 

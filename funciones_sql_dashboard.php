@@ -10,6 +10,7 @@ function sGetCuidadores(){
 					(SELECT NOMBRE FROM usuarios WHERE ID=cuidadores.ID_USUARIO)as NOMBRE,
 					(SELECT PROVINCIA FROM usuarios WHERE ID=cuidadores.ID_USUARIO)as PROVINCIA,
 					(SELECT URL_FOTO FROM usuarios WHERE ID=cuidadores.ID_USUARIO)as URL_FOTO,
+					(SELECT CIUDAD FROM usuarios WHERE ID=cuidadores.ID_USUARIO)as CIUDAD,
 					(SELECT BIOGRAFIA FROM usuarios WHERE ID=cuidadores.ID_USUARIO)as BIOGRAFIA
 					FROM cuidadores";
     $ejecucion=$conexion->query($sentencia);
