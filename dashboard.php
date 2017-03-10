@@ -218,11 +218,10 @@
 						</div>
                        <!-- start: page -->
                         <div class="col-md-8 col-lg-8">
-                        <div class="pricing-table">
+                        <div class="pricing-table" id="pricing-table">
 							<?php echo pMostrarCuidadores(); ?>
-                            <?php echo pMostrarModalContactar(); ?>
 						</div>
-                            
+                        <?php echo pMostrarModalContactar(); ?>   
                     </div>
 
 					</div>
