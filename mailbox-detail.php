@@ -64,34 +64,7 @@
 
 			<!-- start: header -->
 			<header class="header">
-				<div class="logo-container">
-					<a href="../" class="logo">
-						<img src="assets/images/logo.png" height="35" alt="Porto Admin" />
-					</a>
-					<div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
-						<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
-					</div>
-				</div>
-			
-				<!-- start: search & user box -->
-				<div class="header-right">
-			
-					<ul class="notifications">
-                        
-						<?php echo pMostrarNotificacionesMensajes(); ?>
-                        
-						<?php echo pMostrarNotificacionesAlerta(); ?>
-                        
-					</ul>
-			
-					<span class="separator"></span>
-			
-                    <!-- Info Usuario -->
-					<?php echo pMostrarInfoUsuario(); ?>
-                    <!-- Info Usuario -->
-                    
-				</div>
-				<!-- end: search & user box -->
+				<?php echo pMostrarHeader() ?>
 			</header>
 			<!-- end: header -->
 

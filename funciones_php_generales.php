@@ -237,4 +237,39 @@ function pMostrarNotificacionesAlerta() {
     
 }
 
+function pMostrarHeader(){
+
+    $contenido = '<div class="logo-container">
+					<a href="dashboard.php" class="logo">
+						<img src="assets/images/logo.png" height="35" alt="BlaBlaPet" />
+					</a>
+					<div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
+						<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+					</div>
+				</div>
+			
+				<!-- start: search & user box -->
+				<div class="header-right">
+			
+					<ul class="notifications">
+                        
+						'.pMostrarNotificacionesMensajes().'
+                        
+						'.pMostrarNotificacionesAlerta().'
+                        
+					</ul>
+			
+					<span class="separator"></span>
+			
+                    <!-- Info Usuario -->
+					'.pMostrarInfoUsuario().'
+                    <!-- Info Usuario -->
+                    
+				</div>
+				<!-- end: search & user box -->';
+    
+    return $contenido;
+
+}
+
 ?>
