@@ -40,7 +40,7 @@ function sGetMascotas($ID)
        
                                                         
                                                         
-                                                        
+    }
                            
     return $text;
 }
