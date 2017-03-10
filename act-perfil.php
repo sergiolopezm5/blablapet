@@ -21,7 +21,7 @@
      
 //{ 
         
-        $sentencia = "UPDATE usuarios SET NOMBRE = ".$NOMBRE.", MAIL = ".$MAIL.", PROVINCIA = ".$PROVINCIA.", BIOGRAFIA = ".$BIOGRAFIA."";
+        $sentencia = "UPDATE usuarios SET NOMBRE = '".$NOMBRE."', MAIL = '".$MAIL."', PROVINCIA = '".$PROVINCIA."', BIOGRAFIA = '".$BIOGRAFIA."' WHERE ID = '".$ID_USUARIO."'";
         $ejecucion = $conexion->query($sentencia);
 
         $conexion = null; 
