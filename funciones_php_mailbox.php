@@ -3,9 +3,9 @@
 function pMostrarListaMensajes($ID, $ID_EMISOR, $MENSAJE, $FECHA, $ESTADO) {
     
     $devolver = '';
-    if($ESTADO == "1"){
+    if($ESTADO == "0"){
         $devolver ='<li>';
-    } else if($ESTADO == "2"){ 
+    } else if($ESTADO == "1"){ 
         $devolver = '<li class="unread">';
     }
            $devolver .='
@@ -38,7 +38,7 @@ function pMostrarListaMensajes($ID, $ID_EMISOR, $MENSAJE, $FECHA, $ESTADO) {
 function pMostrarMensaje(){
 
     $mensaje = sObtenerMensaje($_GET['id']);
-
+    sMensajeLeido($_GET['id']);
     $useractual = getUserId();
 
     if($useractual == $mensaje["ID_EMISOR"]){
@@ -66,6 +66,8 @@ function pMostrarMensaje(){
                         </div>
                         </div>';
       
+      
+
         return $contenido;
 
 }

@@ -278,6 +278,7 @@
 								<?php echo pMostrarMensaje() ?>
 							
 								<?php echo pFormEnviarMensaje() ?>
+
 									
 								</div>
 							</div>
