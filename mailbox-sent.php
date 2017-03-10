@@ -310,26 +310,7 @@
 										<div class="nano-content">
 											<ul id="" class="list-unstyled">
 							
-												<li class="unread">
-													<a href="mailbox-email.html">
-														<div class="col-sender">
-															<div class="checkbox-custom checkbox-text-primary ib">
-																<input type="checkbox" id="mail1">
-																<label for="mail1"></label>
-															</div>
-															<p class="m-none ib">Okler Themes</p>
-														</div>
-														<div class="col-mail">
-															<p class="m-none mail-content">
-																<span class="subject">Check out our new Porto Admin theme! &nbsp;–&nbsp;</span>
-																<span class="mail-partial">We are proud to announce that our new theme Porto Admin is ready, wants to know more about it?</span>
-															</p>
-															<p class="m-none mail-date">11:35 am</p>
-														</div>
-													</a>
-												</li>
-							                     
-                                                <?php echo sObtenerMensajesEnviados("1") ?>
+                                                <?php echo sObtenerMensajesEnviados() ?>
 												
 											</ul>
 										</div>

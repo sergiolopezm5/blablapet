@@ -22,11 +22,11 @@ function sObtenerMensajesRecibidos(){
 
 function sObtenerMensajesEnviados(){
     $conexion = conectarDDBB();
-    $query2 = $conexion->prepare('SELECT ID_RECEPTOR, MENSAJE, FECHA, ESTADO FROM Mensajes WHERE ID_EMISOR like :id ORDER BY FECHA DESC LIMIT 0,9');
+    $query2 = $conexion->prepare('SELECT ID, ID_RECEPTOR, MENSAJE, FECHA, ESTADO FROM Mensajes WHERE ID_EMISOR like :id ORDER BY FECHA DESC LIMIT 0,9');
 	$query2 ->execute(array(':id' =>  getUserId()  ));
 
 	while($resultado = $query2->fetch()){
-        return pMostrarListaMensajes($resultado['ID_RECEPTOR'], $resultado['MENSAJE'], $resultado['FECHA'], $resultado['ESTADO'] );
+        return pMostrarListaMensajes($resultado['ID'], $resultado['ID_RECEPTOR'], $resultado['MENSAJE'], $resultado['FECHA'], $resultado['ESTADO'] );
     }
 }
 
@@ -35,7 +35,7 @@ function sEnviarMensaje($idemisor, $idreceptor, $asunto, $contenido){
     $query3 = $conexion->prepare('SELECT ID_RECEPTOR, MENSAJE, FECHA, ESTADO FROM Mensajes WHERE ID_RECEPTOR like :id ORDER BY FECHA DESC LIMIT 0,9');
 	$query3 ->execute(array(':id' => getUserId()   ));
 	while($resultado = $query3->fetch()){
-        return pMostrarListaMensajes($resultado['ID_RECEPTOR'], $resultado['MENSAJE'], $resultado['FECHA'], $resultado['ESTADO'] );
+        return pMostrarListaMensajes($resultado['ID'], $resultado['ID_RECEPTOR'], $resultado['MENSAJE'], $resultado['FECHA'], $resultado['ESTADO'] );
     }
 }
 
