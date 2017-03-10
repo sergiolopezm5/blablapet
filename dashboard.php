@@ -128,7 +128,7 @@
 						<div class="col-md-4 col-lg-3">
 							<section class="panel"> 
 								<div class="panel-body">
-                                    <form method="POST">
+                                    
                                         <div class="form-group mb-lg">
                                 
                                             <label>Provincia</label>
@@ -191,9 +191,9 @@
                                         <div class="form-group mb-lg">
                                             <label>Tamaño</label>
                                             <select name="size" id="size" class="form-control mb-md">
-                                                <option value="1">S</option>
-                                                <option value="2">M</option>
-                                                <option selected="selected" value="3">L</option>
+                                                <option value="3">S</option>
+                                                <option value="5">M</option>
+                                                <option selected="selected" value="10">L</option>
                                             </select>
                                         </div>
 
@@ -201,17 +201,16 @@
                                             <label>E-mail</label>
                                             <select name="agre" id="agre" class="form-control mb-md">
                                                 <option value="1">Muy tranquilo</option>
-                                                <option value="2">Tranquilo</option>
-                                                <option value="3">Normal</option>
-                                                <option value="4">Agresivo</option>
-                                                <option selected="selected" value="5">Muy agresivo</option>
+                                                <option value="3">Tranquilo</option>
+                                                <option value="5">Normal</option>
+                                                <option value="7">Agresivo</option>
+                                                <option selected="selected" value="10">Muy agresivo</option>
                                             </select>
                                         </div>
                                         <div class="form-group mb-lg">
-                                            <button type="submit" name="submit" onclick="filtrarCuidadores()" class="btn btn-primary hidden-xs">Filtrar</button>
+                                            <button name="submit" onclick="filtrarCuidadores()" class="btn btn-primary hidden-xs">Filtrar</button>
                                         </div>
                                     
-                                    </form>
 								</div>
 							</section>
 
@@ -279,8 +278,8 @@
 		<script src="assets/javascripts/theme.init.js"></script>
 
 		<!-- Examples -->
-		<script src="assets/javascripts/dashboard/examples.dashboard.js"></script>
 		<script src="assets/javascripts/ui-elements/examples.modals.js"></script>
+		<script src="dashboard.js"></script>
 
 	</body>
 </html>
