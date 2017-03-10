@@ -237,17 +237,17 @@
 												<div class="form-group">
 													<label class="col-md-3 control-label" for="profileFirstName">Nombre</label>
 													<div class="col-md-8">
-														<input type="text" class="form-control" id="nombre"  value="<?php echo $datos[1]?>">
+														<input type="text" class="form-control" name="nombre"  value="<?php echo $datos[1]?>">
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="col-md-3 control-label" for="profileMail">E-Mail</label>
 													<div class="col-md-8">
-														<input type="text" class="form-control" id="mail" value="<?php echo $datos[2]?>">
+														<input type="text" class="form-control" name="mail" value="<?php echo $datos[2]?>">
 													</div>
 												</div>
                                                 <div class="form-group">
-													<label class="col-md-3 control-label" for="profileFoto">E-Mail</label>
+													<label class="col-md-3 control-label" for="profileFoto">Foto de perfil</label>
 													<div class="col-md-8">
 														<input type="file" name="pic" accept="image/*">
 													</div>
@@ -311,9 +311,6 @@
 	                                                       <option value='53'>Zaragoza</option>
                                                     </select>
                                                     </div>
-													<div class="col-md-8">
-														<input type="text" class="form-control" id="provincia" style="visibility: hidden;">
-													</div>
 												</div>
 											</fieldset>
 											<hr class="dotted tall">
@@ -322,7 +319,7 @@
 												<div class="form-group">
 													<label class="col-md-3 control-label" for="profileBio">Biografía</label>
 													<div class="col-md-8">
-														<textarea class="form-control" rows="3" id="profileBio"><?php echo $datos[7] ?></textarea>
+														<textarea class="form-control" rows="3" name="profileBio"><?php echo $datos[7] ?></textarea>
 													</div>
 												</div>
 											</fieldset>
