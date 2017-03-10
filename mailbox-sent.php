@@ -3,7 +3,7 @@
     include("funciones_sql_generales.php");
     include("funciones_php_generales.php");
 
-    //include("funciones_sql_mailbox.php");
+    include("funciones_sql_mailbox.php");
     include("funciones_php_mailbox.php");
 
 ?>
@@ -247,79 +247,22 @@
 										<div class="inner-menu-content">
 											<a href="mailbox-compose.html" class="btn btn-block btn-primary btn-md pt-sm pb-sm text-md">
 												<i class="fa fa-envelope mr-xs"></i>
-												Compose
+												Nuevo mensaje
 											</a>
 							
 											<ul class="list-unstyled mt-xl pt-md">
 												<li>
-													<a href="mailbox-folder.html" class="menu-item active">Inbox <span class="label label-primary text-weight-normal pull-right">43</span></a>
+													<a href="mailbox-folder.html" class="menu-item ">Recibidos <span class="label label-primary text-weight-normal pull-right"><?php echo sNumMensajesNuevos("2") ?></span></a>
 												</li>
+												
 												<li>
-													<a href="mailbox-folder.html" class="menu-item">Important</a>
+													<a href="mailbox-folder.html" class="menu-item active">Enviados</a>
 												</li>
-												<li>
-													<a href="mailbox-folder.html" class="menu-item">Sent</a>
-												</li>
-												<li>
-													<a href="mailbox-folder.html" class="menu-item">Drafts</a>
-												</li>
-												<li>
-													<a href="mailbox-folder.html" class="menu-item">Trash</a>
-												</li>
+												
+												
 											</ul>
 							
-											<hr class="separator" />
-							
-											<div class="sidebar-widget m-none">
-												<div class="widget-header">
-													<h6 class="title">Labels</h6>
-													<span class="widget-toggle">+</span>
-												</div>
-												<div class="widget-content">
-													<ul class="list-unstyled mailbox-bullets">
-														<li>
-															<a href="#" class="menu-item">Dribbble <span class="ball pink"></span></a>
-														</li>
-														<li>
-															<a href="#" class="menu-item">Envato <span class="ball green"></span></a>
-														</li>
-														<li>
-															<a href="#" class="menu-item">Facebook <span class="ball blue"></span></a>
-														</li>
-													</ul>
-												</div>
-											</div>
-							
-											<hr class="separator" />
-							
-											<div class="sidebar-widget m-none">
-												<div class="widget-header">
-													<h6 class="title">Chat</h6>
-													<span class="widget-toggle">+</span>
-												</div>
-												<div class="widget-content">
-													<ul class="list-unstyled mailbox-bullets">
-														<li>
-															<a href="#" class="menu-item">Amy Doe <span class="ball green"></span></a>
-														</li>
-														<li>
-															<a href="#" class="menu-item">Joey Doe <span class="ball green"></span></a>
-														</li>
-														<li>
-															<a href="#" class="menu-item">Robert Doe <span class="ball orange"></span></a>
-														</li>
-														<li>
-															<a href="#" class="menu-item">John Doe <span class="ball red"></span></a>
-														</li>
-														<li>
-															<a href="#" class="menu-item">Uncle Doe <span class="ball red"></span></a>
-														</li>
-														<li class="text-center mt-sm">
-															<em><a href="#">show offline</a></em>
-														</li>
-													</ul>
-												</div>
-											</div>
+											
 										</div>
 									</div>
 								</div>
@@ -338,7 +281,7 @@
 													<span class="line line-angle2"></span>
 												</a>
 							
-												Inbox
+												Mensajes enviados
 											</h1>
 										</div>
 										<div class="col-sm-6">
@@ -379,7 +322,7 @@
 													</a>
 												</li>
 							                     
-                                                <?php echo pMostrarListaMensajes(); ?>
+                                                <?php echo sObtenerMensajesEnviados("1") ?>
 												
 											</ul>
 										</div>

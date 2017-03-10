@@ -15231,7 +15231,7 @@ html.dark .CodeMirror pre {
 }
 .mailbox .mailbox-email-list .col-mail .mail-content {
 	left: 0;
-	right: 140px;
+	right: 220px;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -15256,9 +15256,9 @@ html.dark .CodeMirror pre {
 	}
 }
 .mailbox .mailbox-email-list .col-mail .mail-date {
-	padding-left: 80px;
+	padding-left: 40px;
 	right: 0;
-	width: 150px;
+	/*width: 250px;*/
 }
 @media only screen and (max-width: 767px) {
 	.mailbox .mailbox-email-list .col-mail .mail-date {

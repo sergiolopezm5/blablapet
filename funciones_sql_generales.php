@@ -28,4 +28,13 @@ function sGetDatosNotificacion($codigo_notificacion)
     
 }
 
+function sGetNombreUsuario($ID){
+    $conexion = conectarDDBB();
+    
+    $query1 = $conexion->prepare('SELECT NOMBRE FROM usuarios WHERE ID like :id');
+	$query1 ->execute(array(':id' => $ID ));
+	$resultado1 = $query1->fetch();
+    return $resultado1[0];
+}
+
 ?>
