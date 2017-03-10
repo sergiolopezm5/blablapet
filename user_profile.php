@@ -10,8 +10,8 @@
     
     if(isset($_SESSION['USER'])) {
 
-        //include("funciones_sql_dashboard.php");
-        include("funciones_php_dashboard.php");
+        include("funciones_sql_user.php");
+        include("funciones_php_user.php");
 
 ?>
 
@@ -198,11 +198,7 @@
 			<div class="inner-wrapper">
                 
                 <!-- start: sidebar -->
-                <?php echo pMostrarSidebar(); 
-                      echo pMostrarInfoUsuario();
-                      $ID = $_SESSION["ID"];
-                      $datos = sGetDatosUsuario($ID);
-                ?>
+                <?php echo pMostrarSidebar(); ?>
 				<!-- end: sidebar -->
 				
 				<section role="main" class="content-body">
