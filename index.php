@@ -150,11 +150,11 @@ if(!isset($_SESSION)) {
 					</header>
 					<div class="box">
 					<h3> ¿Tú mascota necesita despejarse? Dale un paseo </h3>
-						<form method="post" action="#">
+						<form method="post" action="signup.php">
 							<div class="field half first"><input type="text" name="name" placeholder="Dinos tu ciudad" /></div>
 							
 							<ul class="actions">
-								<li><input type="submit" value="Buscar" /></li>
+                                <li><button type="submit" class="btn btn-primary">Buscar</button></li>
 							</ul>
 						</form>
 					</div>
