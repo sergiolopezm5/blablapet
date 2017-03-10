@@ -38,15 +38,4 @@ function sGetNombreUsuario($ID)
     return $resultado1[0];
 }
 
-function sGetDatosUsuario($ID)
-{
-     $conexion = conectarDDBB();
-    
-    $query1 = $conexion->prepare('SELECT * FROM usuarios WHERE ID like :id');
-	$query1 ->execute(array(':id' => $ID ));
-	$resultado1 = $query1->fetch();
-    return $resultado1;
-    
-}
-
 ?>
