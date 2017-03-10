@@ -23,19 +23,26 @@ function pafiltrarCuidadores($provincia, $agresividad_max, $tamano_max){
 	$row = sGetCuidadoresFiltrado($provincia,$agresividad_max,$tamano_max);
 	//print_r($row);
 	//sacar array en PDO
-	foreach($row as $elemento) {
-    $foto = 'images/users/'.$elemento["ID_USUARIO"].'.jpg';
-        $devolver .='<div class="col-lg-3 col-sm-6">
-                        <div class="plan">
-                            <h3 style="background-image: url('.$foto.'); height:100px; margin-bottom:0px;"></h3>
-                            <h4>'.$elemento['NOMBRE'].'</h4>
-                            <a class="btn btn-lg btn-primary modal-basic" href="#modalEnviarMensaje">Contactar</a>
-                            <ul>
-                                <li><b>Provincia: </b>'.$elemento['PROVINCIA'].'</li>
-                                <li><b>Ciudad: </b>'.$elemento['CIUDAD'].'</li>
-                            </ul>
-                        </div>
+	if(empty($row)){
+		$devolver .= '<div class="alert alert-danger">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <strong>¡Lo sentimos!</strong> No tenemos cuidadores con estas características.
                     </div>';
+	}else{
+		foreach($row as $elemento) {
+		$foto = 'images/users/'.$elemento["ID_USUARIO"].'.jpg';
+			$devolver .='<div class="col-lg-3 col-sm-6">
+							<div class="plan">
+								<h3 style="background-image: url('.$foto.'); height:100px; margin-bottom:0px;"></h3>
+								<h4>'.$elemento['NOMBRE'].'</h4>
+								<a class="btn btn-lg btn-primary modal-basic" href="#modalEnviarMensaje">Contactar</a>
+								<ul>
+									<li><b>Provincia: </b>'.$elemento['PROVINCIA'].'</li>
+									<li><b>Ciudad: </b>'.$elemento['CIUDAD'].'</li>
+								</ul>
+							</div>
+						</div>';
+		}
 	}
 	return $devolver;
 	
