@@ -465,12 +465,8 @@
 
 									</div>
                                     <div id="edit-pet" class="tab-pane">
-
-										<form class="form-horizontal" method="get">
 											<h4 class="mb-xlg">Mis mascotas</h4>
-											
-
-										</form>
+											<?php echo sGetMascotas($ID); ?>
 
 									</div>
 								</div>
