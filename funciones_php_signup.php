@@ -16,7 +16,7 @@ function pMostrarAlerta($codigo)
 function pMostrarModalLogin() {
     $devolver = '<div id="modalForm" class="modal-block modal-block-primary mfp-hide">
                     <section class="panel">
-                        <header class="panel-heading">
+                        <header class="panel-heading" style="margin-bottom: 0px;">
                             <h2 class="panel-title">Inicia Sesión</h2>
                         </header>
                         <div class="panel-body">

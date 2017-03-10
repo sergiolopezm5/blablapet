@@ -1,3 +1,24 @@
+<?php 
+
+    ## Añadimos las funciones generales
+    include("funciones_sql_generales.php");
+    include("funciones_php_generales.php");
+
+
+if(!isset($_SESSION)) {
+    session_start();
+}
+	
+	## Añadimos las funciones propias de esta pagina
+	include("funciones_sql_signup.php");
+    include("funciones_php_signup.php");
+
+    ## Añadimos las funciones para el inicio de sesion
+	include("funciones_sql_login.php");
+
+?>
+
+
 <!doctype html>
 <html class="fixed sidebar-light">
 	<head>
@@ -62,7 +83,8 @@
 				<div class="header-right">
 			
 					<span class="separator"></span>
-                    <button type="submit" class="btn btn-primary">Inicia Sesión</button>
+                    <a class="mb-xs mt-xs mr-xs btn btn-primary" href="signup.php">Registrate</a>
+                    <a class="mb-xs mt-xs mr-xs modal-basic btn btn-primary" href="#modalForm">Inicia Sesión</a>
                     <span class="separator"></span>
                 
 				</div>
@@ -70,7 +92,7 @@
 			</header>
 			<!-- end: header -->
 
-			
+			 <?php echo pMostrarModalLogin(); ?>
 
                 <!-- Intro -->
 			<section id="intro" class="main style1 dark fullscreen" style="height:715px;">
@@ -240,6 +262,7 @@
 
 		<!-- Examples -->
 		<script src="assets/javascripts/dashboard/examples.dashboard.js"></script>
+        <script src="assets/javascripts/ui-elements/examples.modals.js"></script>
 
 	</body>
 </html>
