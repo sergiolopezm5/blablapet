@@ -24,17 +24,18 @@ function pafiltrarCuidadores($provincia, $agresividad_max, $tamano_max){
 	//print_r($row);
 	//sacar array en PDO
 	foreach($row as $elemento) {
-      $devolver .='<div class="col-lg-3 col-sm-6">
+    $foto = 'images/users/'.$elemento["ID_USUARIO"].'.jpg';
+        $devolver .='<div class="col-lg-3 col-sm-6">
                         <div class="plan">
-                            <h3>'.$elemento['NOMBRE'].'<span>'.$elemento['URL_FOTO'].'</span></h3>
+                            <h3 style="background-image: url('.$foto.'); height:100px; margin-bottom:0px;"></h3>
+                            <h4>'.$elemento['NOMBRE'].'</h4>
                             <a class="btn btn-lg btn-primary modal-basic" href="#modalEnviarMensaje">Contactar</a>
                             <ul>
                                 <li><b>Provincia: </b>'.$elemento['PROVINCIA'].'</li>
                                 <li><b>Ciudad: </b>'.$elemento['CIUDAD'].'</li>
                             </ul>
                         </div>
-                    </div>';	
-		
+                    </div>';
 	}
 	return $devolver;
 	
