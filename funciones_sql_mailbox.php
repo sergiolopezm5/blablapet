@@ -35,13 +35,11 @@ function sObtenerMensajesEnviados(){
     return $text;
 }
 
-function sEnviarMensaje($idemisor, $idreceptor, $asunto, $contenido){
+function sEnviarMensaje($idemisor, $idreceptor, $contenido){
 	$conexion = conectarDDBB();
-    $query3 = $conexion->prepare('SELECT ID_RECEPTOR, MENSAJE, FECHA, ESTADO FROM Mensajes WHERE ID_RECEPTOR like :id ORDER BY FECHA DESC LIMIT 0,9');
-	$query3 ->execute(array(':id' => getUserId()   ));
-	while($resultado = $query3->fetch()){
-        return pMostrarListaMensajes($resultado['ID'], $resultado['ID_RECEPTOR'], $resultado['MENSAJE'], $resultado['FECHA'], $resultado['ESTADO'] );
-    }
+    $query3 = $conexion->prepare('INSERT INTO `mensajes` ( `ID_EMISOR`, `ID_RECEPTOR`, `MENSAJE`, `ESTADO`) VALUES ( :idemisor, :idreceptor, :contenido,  1);');
+	$query3 ->execute(array(':idemisor' => $idemisor, ':idreceptor' => $idreceptor, ':contenido' => $contenido,     ));
+	$resultado = $query3->fetch();
 }
 
 function sNumMensajesNuevos(){

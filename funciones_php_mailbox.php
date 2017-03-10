@@ -35,6 +35,18 @@ function pMostrarListaMensajes($ID, $ID_EMISOR, $MENSAJE, $FECHA, $ESTADO) {
     return $devolver;
 }
 
+function pMensajesNuevos(){
+    $mensajesnuevos = sNumMensajesNuevos();
+
+    if($mensajesnuevos > 0){
+        return '<span class="label label-primary text-weight-normal pull-right">'. $mensajesnuevos .'</span>';
+    }
+    else {
+        return '';
+    }
+    
+}
+
 function pMostrarMensaje(){
 
     $mensaje = sObtenerMensaje($_GET['id']);
@@ -66,19 +78,21 @@ function pMostrarMensaje(){
                         </div>
                         </div>';
       
-      
+       
 
-        return $contenido;
+        return $contenido . pFormEnviarMensaje($mensaje["ID_EMISOR"]);
 
 }
 
-function pFormEnviarMensaje(){
+function pFormEnviarMensaje($destino){
 
     $form = '<div class="compose" style="margin-left:20px; margin-right:20px;">
-										<form class="form-horizontal form-bordered" method="get">
+										<form class="form-horizontal form-bordered" method = "post" action="nuevomensaje.php">
 											<div class="form-group">
-												<textarea class="form-control" rows="3"  data-plugin-textarea-autosize> </textarea>
-												<button class="mb-xs mt-xs mr-xs btn btn-primary" type="submit">
+												<textarea class="form-control" rows="3" name="contenido"  data-plugin-textarea-autosize> </textarea>
+											    <input type="hidden" name="idemisor" value="'.$_GET['id'].'">
+                                                 <input type="hidden" name="idreceptor" value="'.$destino.'">
+                                                <button class="mb-xs mt-xs mr-xs btn btn-primary" type="submit">
 													Enviar
 												</button>
 											</div>
