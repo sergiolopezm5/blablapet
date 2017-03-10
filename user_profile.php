@@ -5,6 +5,9 @@
     include("funciones_php_generales.php");
 
     session_start();
+
+    
+    
 ?>
 
 <!doctype html>
@@ -44,7 +47,6 @@
 		<!-- Head Libs -->
 		<script src="assets/vendor/modernizr/modernizr.js"></script>
 
-    include("funciones_php_dashboard.php");
 	</head>
 	<body>
 		<section class="body">
@@ -75,32 +77,6 @@
 					<span class="separator"></span>
 			
 					<span class="separator"></span>
-			
-					<div id="userbox" class="userbox">
-						<a href="#" data-toggle="dropdown">
-							<figure class="profile-picture">
-								<img src="assets/images/!logged-user.jpg" alt="Joseph Doe" class="img-circle" data-lock-picture="assets/images/!logged-user.jpg" />
-							</figure>
-							<div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
-								<span class="name">John Doe Junior</span>
-								<span class="role">Usuario</span>
-							</div>
-			
-							<i class="fa custom-caret"></i>
-						</a>
-			
-						<div class="dropdown-menu">
-							<ul class="list-unstyled">
-								<li class="divider"></li>
-								<li>
-									<a role="menuitem" tabindex="-1" href="user_profile.php"><i class="fa fa-user"></i>Mi perfil</a>
-								</li>
-								<li>
-									<a role="menuitem" tabindex="-1" href="signup.php"><i class="fa fa-power-off"></i>Cerrar sesión</a>
-								</li>
-							</ul>
-						</div>
-					</div>
 				</div>
 				<!-- end: search & user box -->
 			</header>
@@ -109,7 +85,9 @@
 			<div class="inner-wrapper">
                 
                 <!-- start: sidebar -->
-                <?php echo pMostrarSidebar(); ?>
+                <?php echo pMostrarSidebar(); 
+                      echo pMostrarInfoUsuario();
+                ?>
 				<!-- end: sidebar -->
 				
 				<section role="main" class="content-body">
