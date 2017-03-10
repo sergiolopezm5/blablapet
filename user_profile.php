@@ -187,7 +187,11 @@
 					<span class="separator"></span>
 			
                     <!-- Info Usuario -->
-					<?php echo pMostrarInfoUsuario(); ?>
+					<?php echo pMostrarInfoUsuario(); 
+                        $ID = $_SESSION['USER'];
+                        
+                        $datos = sGetDatosUsuario($ID);
+                    ?>
                     <!-- Info Usuario -->
 
 				</div>
@@ -203,7 +207,7 @@
 				
 				<section role="main" class="content-body">
 					<header class="page-header">
-						<h2>Light Sidebar Layout</h2>
+						<h2>Perfil de Usuario</h2>
                         
 					</header>
 
@@ -211,7 +215,6 @@
 
 					<div class="row">
 						<div class="col-md-4 col-lg-3">
-]
 							<section class="panel">
 								<div class="panel-body">
 									<div class="thumb-info mb-md">
@@ -348,16 +351,22 @@
 													</div>
 												</div>
 												<div class="form-group">
-													<label class="col-md-3 control-label" for="profileAddress">E-Mail</label>
+													<label class="col-md-3 control-label" for="profileMail">E-Mail</label>
 													<div class="col-md-8">
 														<input type="text" class="form-control" id="mail" value="<?php echo $datos[2]?>">
+													</div>
+												</div>
+                                                <div class="form-group">
+													<label class="col-md-3 control-label" for="profileFoto">E-Mail</label>
+													<div class="col-md-8">
+														<input type="file" name="pic" accept="image/*">
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="col-md-3 control-label" for="profileCompany">Provincia</label>
                                                     <div class="col-md-8">
                                                     <select name="provincia">
-	                                                       <option value='0'>(Seleccionar)</option>
+	                                                       <option value='1'>(Seleccionar)</option>
 	                                                       <option value='2'>Álava</option>
 	                                                       <option value='3'>Albacete</option>
 	                                                       <option value='4'>Alicante/Alacant</option>
@@ -458,76 +467,8 @@
                                     <div id="edit-pet" class="tab-pane">
 
 										<form class="form-horizontal" method="get">
-											<h4 class="mb-xlg">Personal Information</h4>
-											<fieldset>
-												<div class="form-group">
-													<label class="col-md-3 control-label" for="profileFirstName">First Name</label>
-													<div class="col-md-8">
-														<input type="text" class="form-control" id="profileFirstName">
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-md-3 control-label" for="profileLastName">Last Name</label>
-													<div class="col-md-8">
-														<input type="text" class="form-control" id="profileLastName">
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-md-3 control-label" for="profileAddress">Address</label>
-													<div class="col-md-8">
-														<input type="text" class="form-control" id="profileAddress">
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-md-3 control-label" for="profileCompany">Company</label>
-													<div class="col-md-8">
-														<input type="text" class="form-control" id="profileCompany">
-													</div>
-												</div>
-											</fieldset>
-											<hr class="dotted tall">
-											<h4 class="mb-xlg">About Yourself</h4>
-											<fieldset>
-												<div class="form-group">
-													<label class="col-md-3 control-label" for="profileBio">Biographical Info</label>
-													<div class="col-md-8">
-														<textarea class="form-control" rows="3" id="profileBio"></textarea>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-xs-3 control-label mt-xs pt-none">Public</label>
-													<div class="col-md-8">
-														<div class="checkbox-custom checkbox-default checkbox-inline mt-xs">
-															<input type="checkbox" checked="" id="profilePublic">
-															<label for="profilePublic"></label>
-														</div>
-													</div>
-												</div>
-											</fieldset>
-											<hr class="dotted tall">
-											<h4 class="mb-xlg">Change Password</h4>
-											<fieldset class="mb-xl">
-												<div class="form-group">
-													<label class="col-md-3 control-label" for="profileNewPassword">New Password</label>
-													<div class="col-md-8">
-														<input type="text" class="form-control" id="profileNewPassword">
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-md-3 control-label" for="profileNewPasswordRepeat">Repeat New Password</label>
-													<div class="col-md-8">
-														<input type="text" class="form-control" id="profileNewPasswordRepeat">
-													</div>
-												</div>
-											</fieldset>
-											<div class="panel-footer">
-												<div class="row">
-													<div class="col-md-9 col-md-offset-3">
-														<button type="submit" class="btn btn-primary">Submit</button>
-														<button type="reset" class="btn btn-default">Reset</button>
-													</div>
-												</div>
-											</div>
+											<h4 class="mb-xlg">Mis mascotas</h4>
+											
 
 										</form>
 
