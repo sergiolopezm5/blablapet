@@ -29,7 +29,9 @@ function pMensajeEvento($codigo_mensaje) {
                     </div>';
 
         return   $devolver;
-    }
+    }else {
+		return '';
+	}
 }
 
 function pMostrarSidebar() {

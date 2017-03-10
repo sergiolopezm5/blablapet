@@ -33,7 +33,7 @@ function sEnviarMensaje($idemisor, $idreceptor, $asunto, $contenido){
 function sNumMensajesNuevos($iduser){
     $conexion = conectarDDBB();
     
-    $query4 = $conexion->prepare('SELECT COUNT(*) FROM MENSAJES WHERE ESTADO like 1 and ID_RECEPTOR like :id');
+    $query4 = $conexion->prepare('SELECT COUNT(*) FROM Mensajes WHERE ESTADO like 1 and ID_RECEPTOR like :id');
 	$query4 ->execute(array(':id' => $iduser  ));
 	$resultado4 = $query4->fetch();
     return $resultado4[0];

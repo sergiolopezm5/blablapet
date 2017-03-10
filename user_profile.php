@@ -189,7 +189,7 @@
                     <!-- Info Usuario -->
 					<?php echo pMostrarInfoUsuario(); ?>
                     <!-- Info Usuario -->
-                    
+
 				</div>
 				<!-- end: search & user box -->
 			</header>
@@ -198,7 +198,11 @@
 			<div class="inner-wrapper">
                 
                 <!-- start: sidebar -->
-                <?php echo pMostrarSidebar(); ?>
+                <?php echo pMostrarSidebar(); 
+                      echo pMostrarInfoUsuario();
+                      $ID = $_SESSION["ID"];
+                      $datos = sGetDatosUsuario($ID);
+                ?>
 				<!-- end: sidebar -->
 				
 				<section role="main" class="content-body">
