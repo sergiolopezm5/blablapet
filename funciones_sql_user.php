@@ -27,7 +27,7 @@ function sGetMascotas($ID)
             <div class="form-group">
             
             <label class="col-md-3 control-label" for="profileFirstName">'.$resultado['NOMBRE'].'</label>
-					<input type="submit" />									
+					<button type="submit" class="btn btn-primary">Editar</button>									
                 </div>
 									
                 </fieldset></form><hr class="dotted tall">';

@@ -148,13 +148,13 @@
 								<div class="tab-content">
 									<div id="overview" class="tab-pane active">
 										
-                                        <form class="form-horizontal" method="get">
+                                        <form action="reg-mascota.php" class="form-horizontal" method="POST">
 											<h4 class="mb-xlg">Nueva mascota</h4>
 											<fieldset>
 												<div class="form-group">
 													<label class="col-md-3 control-label" for="profileFirstName">Nombre</label>
 													<div class="col-md-8">
-														<input type="text" class="form-control" id="nombremascota">
+														<input type="text" class="form-control" name="nombremascota">
 													</div>
 												</div>
                                                 <br>
@@ -162,24 +162,21 @@
 												<div class="form-group">
 													<label class="col-md-3 control-label" for="profileLastName">Animal</label>
 													<div class="col-md-8">
-														<select name="tipo" id=tipo>
+														<select name="tipo">
 
-                                                                <option value="1">Perro</option>
+                                                                <option value="Perro">Perro</option>
 
-                                                                <option value="2">Gato</option>
+                                                                <option value="Gato">Gato</option>
 
-                                                                <option value="3">Otros</option>
+                                                                <option value="0">Otros</option>
 
                                                         </select>
-													</div>
-                                                    <div class="col-md-8">
-														<input type="text" class="form-control" id="tipo-mascota"  style="visibility: hidden;">
-													</div>
+                                                    </div>
 												</div>
 												<div class="form-group">
 													<label class="col-md-3 control-label" for="profileAddress">Tamano</label>
 													<div class="col-md-8">
-                                                        <select name="tamano" id="tamano">
+                                                        <select name="tamano">
 
                                                                 <option value="1">S</option>
 
@@ -189,14 +186,12 @@
 
                                                         </select>
 													</div>
-                                                     <div class="col-md-8">
-														<input type="text" class="form-control" id="tamano" style="visibility: hidden;">
-                                                     </div>
+                                                     
 												</div>
                                                 <div class="form-group">
 													<label class="col-md-3 control-label" for="profileAddress">Agresividad</label>
 													<div class="col-md-8">
-														<select name="agresividad" id="agresividad">
+														<select name="agresividad">
 
                                                                 <option value="1">Muy tranquilo</option>
 
@@ -210,6 +205,7 @@
 
                                                         </select>
 													</div>
+                                                  
 												</div>
 											</fieldset>
 											<hr class="dotted tall">
@@ -218,7 +214,7 @@
 												<div class="form-group">
 													<label class="col-md-3 control-label" for="profileBio">Mascota</label>
 													<div class="col-md-8">
-														<textarea class="form-control" rows="3" id="mascotaBio"></textarea>
+														<textarea class="form-control" rows="3" name="mascotaBio"></textarea>
 													</div>
 												</div>
 											</fieldset>
@@ -235,7 +231,7 @@
 									</div>
 									<div id="edit" class="tab-pane">
 
-										<form class="form-horizontal" method="get">
+										<form action="act-perfil.php" class="form-horizontal" method="POST">
 											<h4 class="mb-xlg">Información Personal</h4>
 											<fieldset>
 												<div class="form-group">
@@ -416,3 +412,4 @@
 <?php } else {
         header("Location: index.php");
     } ?>
+
