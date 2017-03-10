@@ -119,7 +119,7 @@
 
 				<section role="main" class="content-body">
 					<header class="page-header">
-						<h2>Light Sidebar Layout</h2>
+						<h2>Mis mensajes</h2>
                         
 					</header>
 
