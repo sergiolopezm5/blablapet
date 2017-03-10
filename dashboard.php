@@ -92,7 +92,7 @@
 
 				<section role="main" class="content-body">
 					<header class="page-header">
-						<h2>Light Sidebar Layout</h2>
+						<h2>Inicio</h2>
                         
 					</header>
 
