@@ -4,20 +4,17 @@ function sGetDatosUsuario($ID)
 {
      $conexion = conectarDDBB();
     
-    $query1 = $conexion->prepare('SELECT * FROM usuarios WHERE ID like :id');
-	$query1 ->execute(array(':id' => $ID ));
+    $query1 = $conexion->query("SELECT * FROM usuarios WHERE ID = '".$ID);
 	$resultado1 = $query1->fetch();
     return $resultado1;
     
 }
 
-
 function sGetMascotas($ID)
 {
     $conexion = conectarDDBB();
     $text = "";
-    $query = $conexion->prepare('SELECT * FROM mascotas WHERE ID_USUARIO like :id');
-    $query -> execute(array(':id' => $ID));
+    $query = $conexion->query("SELECT * FROM mascotas WHERE ID_USUARIO = ".$ID);
     while($resultado = $query->fetch()){
 
          $text .= '<br>
