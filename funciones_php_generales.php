@@ -40,7 +40,7 @@ function pMostrarSidebar() {
 				
 					<div class="sidebar-header">
 						<div class="sidebar-title">
-							Navigation
+							Navegación
 						</div>
 						<div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
 							<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
@@ -52,22 +52,22 @@ function pMostrarSidebar() {
 							<nav id="menu" class="nav-main" role="navigation">
 								<ul class="nav nav-main">
 									<li>
-										<a href="index.html">
+										<a href="dashboard.php">
 											<i class="fa fa-home" aria-hidden="true"></i>
-											<span>Dashboard</span>
+											<span>Inicio</span>
 										</a>
 									</li>
                                     <li>
-										<a href="index.html">
+										<a href="user_profile.php">
 											<i class="fa fa-user" aria-hidden="true"></i>
 											<span>Perfil</span>
 										</a>
 									</li>
 									<li>
-										<a href="mailbox-folder.html">
+										<a href="mailbox-inbox.php">
 											<span class="pull-right label label-primary">182</span>
 											<i class="fa fa-envelope" aria-hidden="true"></i>
-											<span>Mailbox</span>
+											<span>Mensajes</span>
 										</a>
 									</li>
 								</ul>

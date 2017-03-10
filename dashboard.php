@@ -9,7 +9,7 @@
     
     if(isset($_SESSION['USER'])) {
 
-        //include("funciones_sql_dashboard.php");
+        include("funciones_sql_dashboard.php");
         include("funciones_php_dashboard.php");
 
 
@@ -229,11 +229,10 @@
 					</header>
 
 					<!-- start: page -->
-					
+				<!-- Formulario para el filtrado de resultados -->
                     <div class="row">
 						<div class="col-md-4 col-lg-3">
-
-							<section class="panel">
+							<section class="panel"> 
 								<div class="panel-body">
 									<div class="thumb-info mb-md">
 										<img src="assets/images/!logged-user.jpg" class="rounded img-responsive" alt="John Doe">
@@ -285,6 +284,7 @@
 							</section>
 
 						</div>
+                       <!-- start: page -->
                         <div class="col-md-8 col-lg-8">
                         <div class="pricing-table">
 							<?php echo pMostrarCuidadores(); ?>
