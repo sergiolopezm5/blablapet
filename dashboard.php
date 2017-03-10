@@ -128,7 +128,7 @@
 						<div class="col-md-4 col-lg-3">
 							<section class="panel"> 
 								<div class="panel-body">
-                                    <form>
+                                    <form method="POST">
                                         <div class="form-group mb-lg">
                                 
                                             <label>Provincia</label>
