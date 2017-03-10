@@ -12,7 +12,7 @@ function pMostrarCuidadores() {
                         <div class="plan">
                             <h3 style="background-image: url('.$foto.'); height:100px; margin-bottom:0px;"></h3>
                             <h4>'.$datos['NOMBRE'].'</h4>
-                            <a class="btn btn-lg btn-primary modal-basic" href="#modalEnviarMensaje">Contactar</a>
+                            <a class="btn btn-lg btn-primary " href="infouser.php?id='.$datos["ID_USUARIO"].'">Contactar</a>
                             <ul>
                                 <li><b>Provincia: </b>'.$datos['PROVINCIA'].'</li>
                                 <li><b>Ciudad: </b>'.$datos['CIUDAD'].'</li>
@@ -28,23 +28,10 @@ function pMostrarModalContactar() {
     $devolver = '<div id="modalEnviarMensaje" class="modal-block modal-block-primary mfp-hide">
                     <section class="panel">
                         <header class="panel-heading">
-                            <h2 class="panel-title">Inicia Sesión</h2>
+                            <h2 class="panel-title">Contactar</h2>
                         </header>
                         <div class="panel-body">
-                            <form id="login-form" method="post" action="'.$_SERVER['PHP_SELF'].'" class="form-horizontal mb-lg" novalidate="novalidate">
-                                <div class="form-group mb-lg col-md-12">
-                                    <label>E-mail</label>
-                                    <input name="email-login" type="email" class="form-control input-lg" />
-                                </div>
-                                <div class="form-group mb-lg col-md-12">
-                                    <label>Contraseña</label>
-                                    <input name="pass-login" type="password" class="form-control input-lg" />
-                                </div>
-                                <div class="col-md-12 text-right">
-                                    <button name="submit-login" type="submit" class="btn btn-primary">Entrar</button>
-                                    <button type="reset" class="btn btn-default modal-dismiss">Cancelar</button>
-                                </div>
-                            </form>
+                            '.pFormEnviarMensaje(1,$_SESSION['USER']).'
                         </div>
                     </section>
                 </div>';
