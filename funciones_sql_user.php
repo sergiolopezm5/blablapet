@@ -19,21 +19,18 @@ function sGetMascotas($ID)
     $query = $conexion->prepare('SELECT * FROM mascotas WHERE ID_USUARIO like :id');
     $query -> execute(array(':id' => $ID));
     while($resultado = $query->fetch()){
-        
-         $text .= '<form action="editar-mascota.php?id='.$resultado[0].'" class="form-horizontal" method="get"><fieldset>
-												
-            
-            <form class="form-horizontal" method="get">
-            <div class="form-group">
-            
-            <label class="col-md-3 control-label" for="profileFirstName">'.$resultado['NOMBRE'].'</label>
-					<button type="submit" class="btn btn-primary">Editar</button>									
-                </div>
-									
-                </fieldset></form><hr class="dotted tall">';
-       
-                                                        
-                                                        
+
+         $text .= '<br>
+                    <div class="row">
+                        <div class="form-group col-md-4" style="display:inline-table;">
+                            <img class="img-circle" src="images/pets/'.$resultado['ID'].'.jpg" style="height:150px;width:150px;">								
+                        </div>
+                        <div class="col-md-8">
+                            <h4 style="">Nombre: <b>'.$resultado['NOMBRE'].'</b></h4>	
+                            '.$resultado['BIOGRAFIA'].'
+                        </div>
+                    </div>';
+                                     
     }
                            
     return $text;
