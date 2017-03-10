@@ -4,7 +4,7 @@ function sGetDatosUsuario($ID)
 {
      $conexion = conectarDDBB();
     
-    $query1 = $conexion->query("SELECT * FROM usuarios WHERE ID = '".$ID);
+    $query1 = $conexion->query("SELECT * FROM Usuarios WHERE ID = '".$ID);
 	$resultado1 = $query1->fetch();
     return $resultado1;
     
@@ -14,7 +14,7 @@ function sGetMascotas($ID)
 {
     $conexion = conectarDDBB();
     $text = "";
-    $query = $conexion->query("SELECT * FROM mascotas WHERE ID_USUARIO = ".$ID);
+    $query = $conexion->query("SELECT * FROM Mascotas WHERE ID_USUARIO = ".$ID);
     while($resultado = $query->fetch()){
 
          $text .= '<br>
