@@ -155,7 +155,7 @@ if(!isset($_SESSION)) {
                                 <a href="https://www.linkedin.com/in/césar-francisco-san-nicolás-mart%C3%ADnez-05a539114/" style="color:#0088cc;"><b>Cesar</b></a>
                             </div>
                         </div>
-						<p>Somos estudiantes de Ingeniería Telemática en la UPCT y, sobretodo, amantes de los animales.</p>
+						<p>Somos estudiantes de Ingeniería Telemática en la UPCT y, sobre todo, amantes de los animales.</p>
 					</header>
 
 				</div>
