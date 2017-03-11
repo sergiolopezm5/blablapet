@@ -139,19 +139,19 @@ if(!isset($_SESSION)) {
                         <br>
                         <div class="row">
                             <div class="col-md-3">
-                                <img style="width:150px; height:150px; border-radius:150px;" src="images/users/1.jpg">
+                                <img style="width:150px; height:150px; border-radius:150px;" src="images/we/sergio.jpg">
                                 <a href="https://www.linkedin.com/in/sergio-lopez-milan/" style="color:#0088cc;"><b>Sergio</b></a>
                             </div>
                             <div class="col-md-3">
-                                <img style="width:150px; height:150px; border-radius:150px;" src="images/users/1.jpg">
+                                <img style="width:150px; height:150px; border-radius:150px;" src="images/we/jaime.jpg">
                                 <a href="https://www.linkedin.com/in/jaime-mart%C3%ADnez-gamb%C3%ADn-941338a2/" style="color:#0088cc;"><b>Jaime</b></a>
                             </div>
                             <div class="col-md-3">
-                                <img style="width:150px; height:150px; border-radius:150px;" src="images/users/1.jpg">
+                                <img style="width:150px; height:150px; border-radius:150px;" src="images/we/marcos.jpg">
                                 <a href="https://www.linkedin.com/in/marcos-andreo-oliver-51194b136/" style="color:#0088cc;"><b>Marcos</b></a>
                             </div>
                             <div class="col-md-3">
-                                <img style="width:150px; height:150px; border-radius:150px;" src="images/users/1.jpg">
+                                <img style="width:150px; height:150px; border-radius:150px;" src="images/we/cesar.jpg">
                                 <a href="https://www.linkedin.com/in/césar-francisco-san-nicolás-mart%C3%ADnez-05a539114/" style="color:#0088cc;"><b>Cesar</b></a>
                             </div>
                         </div>
