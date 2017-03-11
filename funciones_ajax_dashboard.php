@@ -26,7 +26,7 @@ function pafiltrarCuidadores($provincia, $agresividad_max, $tamano_max){
 	if(empty($row)){
 		$devolver .= '<div class="alert alert-danger">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <strong>¡Lo sentimos!</strong> No tenemos cuidadores con estas características.
+                        <strong>¡Oucchhh!</strong> No tenemos cuidadores con estas características.
                     </div>';
 	}else{
 		foreach($row as $elemento) {

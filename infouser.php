@@ -108,10 +108,7 @@
 
 							<div class="tabs">
 								<ul class="nav nav-tabs tabs-primary">
-                                    <li class="active">
-										<a href="#edit-pet" data-toggle="tab">Información</a>
-                                    </li>
-									<li >
+									<li class="active">
 										<a href="#overview" data-toggle="tab">Mascotas</a>
 									</li>
 									<li>
@@ -119,17 +116,15 @@
 									</li>
 								</ul>
 								<div class="tab-content">
-                                    <div id="edit-pet" class="tab-pane active">
-                                        <!-- Información -->
-										
-
-									</div>
-									<div id="overview" class="tab-pane">
+									<div id="overview" class="tab-pane  active">
 										<!-- Mascotas -->
                                         <?php echo sGetMascotas(getId()); ?>
 									</div>
 									<div id="edit" class="tab-pane">
-                                        <!-- Valoración -->
+                                        <br>
+                                        <ul class="simple-user-list mb-xlg">
+                                            <?php echo pGetComentarios(getId()); ?>
+                                        </ul>
 									</div>
 								</div>
 							</div>
