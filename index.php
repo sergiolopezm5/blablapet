@@ -100,7 +100,7 @@ if(!isset($_SESSION)) {
 					<header>
 						<h2>Hola.</h2>
 					</header>
-					<p>Bienvenido a <strong>BlaBlaPet</strong>, la nueva plataforma de adopción y cuidado de mascotas.</p>
+					<p>Bienvenido a <strong>BlaBlaPet</strong>, la nueva forma de adopción y cuidado de mascotas.</p>
 					<footer>
 						<a href="#one" class="button style2 down">Siguiente</a>
 					</footer>

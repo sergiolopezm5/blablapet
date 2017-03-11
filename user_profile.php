@@ -155,11 +155,11 @@
 													<div class="col-md-8">
                                                         <select name="tamano">
 
-                                                                <option value="1">S</option>
+                                                                <option value="3">S</option>
 
-                                                                <option value="2">M</option>
+                                                                <option value="5">M</option>
 
-                                                                <option value="3">L</option>
+                                                                <option value="10">L</option>
 
                                                         </select>
 													</div>
@@ -172,13 +172,13 @@
 
                                                                 <option value="1">Muy tranquilo</option>
 
-                                                                <option value="2">Tranquilo</option>
+                                                                <option value="3">Tranquilo</option>
 
-                                                                <option value="3">Normal</option>
+                                                                <option value="5">Normal</option>
                                                             
-                                                                <option value="4">Agresivo</option>
+                                                                <option value="7">Agresivo</option>
                                                             
-                                                                <option value="5">Muy agresivo</option>
+                                                                <option value="10">Muy agresivo</option>
 
                                                         </select>
 													</div>
