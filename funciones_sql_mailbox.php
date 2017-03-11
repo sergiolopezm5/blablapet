@@ -63,7 +63,7 @@ function sObtenerMensaje($IDMENSAJE){
 
 function sMensajeLeido($IDMENSAJE){
     $conexion = conectarDDBB();
-    $query5 = $conexion->prepare(' UPDATE `Mensajes` SET `ESTADO` = '0' WHERE `mensajes`.`ID` = :id ');
+    $query5 = $conexion->prepare(' UPDATE `Mensajes` SET `ESTADO` = 0 WHERE `mensajes`.`ID` = :id ');
 	$query5 ->execute(array(':id' =>  $IDMENSAJE ));
     $resultado5 = $query5->fetch();
     $conexion = null;
