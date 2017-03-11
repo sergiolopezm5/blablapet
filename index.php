@@ -113,7 +113,7 @@ if(!isset($_SESSION)) {
 					<header>
 						<h2>¿Qué hacemos?</h2>
 					</header>
-					<p>Nos encargamos de poner en contacto personas que necesiten a alguien que se encargue de su mascota con otras que se ofrezcan a cuidar de ellas.</p>
+					<p>Somos el puente entre el dueño actual y el futuro dueño. Con el fin de poner en contacto a ambos para que la adaptación de la mascota en su nuevo hogar sea la mejor posible.</p>
 				</div>
 				<a href="#two" class="button style2 down anchored">Siguiente</a>
 			</section>
@@ -124,7 +124,18 @@ if(!isset($_SESSION)) {
 					<header>
 						<h2>¿Qué nos motiva?</h2>
 					</header>
-					<p>Creemos que el tener que dejar con otra persona a una mascota es un duro paso, y queremos garantizar que los dueños estén seguros de que dejan a su mascota con una buena persona, y que los animales tendrán buena calidad de vida.</p>
+					<p>Miles de mascotas son abandonadas al año. Ofrecemos la posibilidad de encontrar a alguien que se haga cargo de tu mascota para no recurrir a la via facil: el abandono. </p>
+				</div>
+				<a href="#work" class="button style2 down anchored">Siguiente</a>
+			</section>
+
+		<!-- Three -->
+			<section id="two" class="main style2 left dark fullscreen" style="height:736px;">
+				<div class="content box style2">
+					<header>
+						<h2>¿Qué nos motiva?</h2>
+					</header>
+					<p>Miles de mascotas son abandonadas al año. Ofrecemos la posibilidad de encontrar a alguien que se haga cargo de tu mascota para no recurrir a la via facil: el abandono. </p>
 				</div>
 				<a href="#work" class="button style2 down anchored">Siguiente</a>
 			</section>
