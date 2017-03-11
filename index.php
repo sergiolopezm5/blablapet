@@ -129,17 +129,7 @@ if(!isset($_SESSION)) {
 				<a href="#work" class="button style2 down anchored">Siguiente</a>
 			</section>
 
-		<!-- Three -->
-			<section id="two" class="main style2 left dark fullscreen" style="height:736px;">
-				<div class="content box style2">
-					<header>
-						<h2>¿Qué nos motiva?</h2>
-					</header>
-					<p>Miles de mascotas son abandonadas al año. Ofrecemos la posibilidad de encontrar a alguien que se haga cargo de tu mascota para no recurrir a la via facil: el abandono. </p>
-				</div>
-				<a href="#work" class="button style2 down anchored">Siguiente</a>
-			</section>
-
+		
 		<!-- Work -->
 			<section id="work" class="main style3 primary">
 				<div class="content">
