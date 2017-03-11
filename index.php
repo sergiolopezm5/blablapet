@@ -135,10 +135,28 @@ if(!isset($_SESSION)) {
 				<div class="content">
 					<header>
 						<h2>¿Quiénes somos?</h2>
+                        <br>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img style="width:150px; height:150px; border-radius:150px;" src="images/users/1.jpg">
+                                <a href="https://www.linkedin.com/in/sergio-lopez-milan/" style="color:#0088cc;"><b>Sergio</b></a>
+                            </div>
+                            <div class="col-md-3">
+                                <img style="width:150px; height:150px; border-radius:150px;" src="images/users/1.jpg">
+                                <a href="https://www.linkedin.com/in/jaime-mart%C3%ADnez-gamb%C3%ADn-941338a2/" style="color:#0088cc;"><b>Jaime</b></a>
+                            </div>
+                            <div class="col-md-3">
+                                <img style="width:150px; height:150px; border-radius:150px;" src="images/users/1.jpg">
+                                <a href="https://www.linkedin.com/in/marcos-andreo-oliver-51194b136/" style="color:#0088cc;"><b>Marcos</b></a>
+                            </div>
+                            <div class="col-md-3">
+                                <img style="width:150px; height:150px; border-radius:150px;" src="images/users/1.jpg">
+                                <a href="https://www.linkedin.com/in/césar-francisco-san-nicolás-mart%C3%ADnez-05a539114/" style="color:#0088cc;"><b>Cesar</b></a>
+                            </div>
+                        </div>
 						<p>Somos estudiantes de Ingeniería Telemática en la UPCT y, sobretodo, amantes de los animales.</p>
 					</header>
-
-					
 
 				</div>
 			</section>
@@ -168,17 +186,8 @@ if(!isset($_SESSION)) {
 
 				<!-- Icons -->
 					<ul class="actions">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
-					</ul>
-
-				<!-- Menu -->
-					<ul class="menu">
-						<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+						<li><a href="https://twitter.com/BlaBlaPet_" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://www.facebook.com/Blablapet-OpenBrain-808547249301083/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 					</ul>
 
 			</footer>
